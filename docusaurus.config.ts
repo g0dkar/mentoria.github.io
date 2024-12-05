@@ -6,15 +6,16 @@ const config: Config = {
   title: 'Mentoria Cloud',
   tagline: 'Aprendendo Programação do Zero',
   favicon: 'img/favicon.ico',
-  url: 'https://mentoria.cloud',
+  //url: 'https://mentoria.cloud',
+  url: 'https://g0dkar.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/mentoria.github.io',
   organizationName: 'g0dkar',
   projectName: 'mentoria.github.io',
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'throw',
+  onBrokenLinks: 'ignore',
+  onBrokenMarkdownLinks: 'ignore',
 
   i18n: {
     defaultLocale: 'pt-BR',

@@ -13,9 +13,9 @@ keywords:
 
 Parágrafo de introdução.
 
-:::warning
+<!-- :::warning
 Este conteúdo é voltado para pessoas leigas, mas que têm interesse em aprender seja por curiosidade ou para se profissionalizarem. Por esta razão, boa parte dos conceitos e definições não serão fiéis "ao dicionário". Por exemplo: um aplicativo não é o mesmo que um programa que não é o mesmo que um sistema. Mas para quem não acompanhou a evolução da área ou está a anos estudando, todos são a mesma coisa.
-:::
+::: -->
 
 ## O que eu preciso para aprender a ser um Programador?
 
@@ -39,7 +39,9 @@ Um Programador nada mais é que uma pessoa que escreve **Programas para Computad
 
 ## O que é um Programa de Computador?
 
-A definição de um Programa de Computador
+A definição de um Programa de Computador mudou com o passar do tempo e a evolução da área como um todo.
+
+Muito antigamente, quando
 
 ## O que um Programador faz?
 
