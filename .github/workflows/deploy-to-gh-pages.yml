@@ -34,12 +34,14 @@ jobs:
           node-version: "22"
           cache: "npm"
       - name: Build Docusaurus Website
+        env:
+         DEPLOYMENT_BRANCH: main
         run: |
           npm install
-          npm run build
-      - name: Deploy to GitHub Pages
-        if: success()
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          npm run deploy
+#      - name: Deploy to GitHub Pages
+#        if: success()
+#        uses: peaceiris/actions-gh-pages@v3
+#        with:
+#          github_token: ${{ secrets.GITHUB_TOKEN }}
+#          publish_dir: ./build
