@@ -64,9 +64,11 @@ Espero que, durante essa mentoria, eu consiga ensinar a você a como fazer o seu
 Por mais curioso que pareça, muitas pessoas acreditam que, por ser um(a) programador(a), você sabe fazer coisas como:
 
 - **Montar um computador**: Existem cursos separados de Montagem e Manutenção de Computadores para isso;
+- **Escolher um computador/notebook/celular**: Não parece, mas essa também é uma área complexa e abordada em cursos relacionados a Montagem e Manutenção de Computadores.
 - **Configurar/Consertar impressoras**: Cada "marca" de impressora tem seus treinamentos para isso;
-- **Configurar telefones**: Não é porque você sabe fazer um aplicativo que você vai saber resolver um problema que o teclado escreve as letras errada;
+- **Configurar telefones**: Não é porque você sabe fazer um aplicativo que você vai saber resolver um problema que o teclado escreve as letras errada, ou porque o Candy Crush não funciona;
 - **Resolver problemas em eletrônicos**: Eletrônica não faz parte do nosso leque de conhecimentos;
-- **Resolver "coisas de suporte"**: Pense em "minha internet tá lenta, o que posso fazer?" - Existem outros cursos e conteúdos específicos para isso.
+- **Resolver "coisas de suporte"**: Pense em "minha internet tá lenta, o que posso fazer?" - Existem outros cursos e conteúdos específicos para isso;
+- **"Hackear"**: Essa é apenas mais uma imensa área da computação. Uma que normalmente não se precisa exatamente saber como fazer um computador fazer o que você quer e sim o que ele *não deveria* fazer. É algo mais próximo da área de Testes de Qualidade de Programas que da programação em si/
 
 Nessa nossa jornada, não abordaremos nada dessas coisas. Vamos aprender **apenas como criar programas de computador**.
