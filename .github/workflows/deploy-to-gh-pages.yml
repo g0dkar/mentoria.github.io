@@ -35,7 +35,8 @@ jobs:
           cache: "npm"
       - name: Build Docusaurus Website
         env:
-         DEPLOYMENT_BRANCH: main
+          USE_SSH: true
+          DEPLOYMENT_BRANCH: main
         run: |
           npm install
           npm run deploy
