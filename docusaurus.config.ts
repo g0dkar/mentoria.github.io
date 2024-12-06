@@ -29,7 +29,8 @@ const config: Config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: './sidebars.ts',
-        },/*
+        },
+        blog: false,/*
         blog: {
           showReadingTime: true,
           feedOptions: {
