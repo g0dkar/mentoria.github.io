@@ -22,6 +22,20 @@ Se compararmos um computador/celular a uma pessoa, nosso Cérebro seria o **Sist
 
 Em um computador/celular, o "cérebro" é o **Sistema Operacional**: um programa especial cuja função é organizar como todas as partes de um computador funcionam umas com as outras e como os programas normais interagem com a máquina e com outros programas.
 
+:::info[Mas porque falar de celulares?]
+Para os programas, não importa tanto se eles estão sendo executados em um computador ou em um celular, os dois são computadores - a diferença é apenas que **os celulares modernos são computadores** portáteis.
+
+Entretanto, saber disso é importante **enquanto você cria o seu programa!** A forma de criar programas para computadores é diferente da forma como se cria programas para celulares.
+:::
+
+:::tip[E esses GB?]
+Em breve vamos falar sobre unidades de medida digitais. Por hora, basta saber que existem MB, GB e TB:
+
+* **MB:** Mega Byte
+* **GB:** Giga Byte - 1 GB = 1000 MB
+* **TB:** Tera Byte - 1 TB = 1000 GB
+:::
+
 ## 1. CPU
 
 Uma das partes mais conhecidas e certamente uma que vamos ouvir falar bastante nessa jornada é a CPU.
@@ -45,7 +59,11 @@ As duas servem para o mesmo propósito: guardar informação. A maior diferença
 
 ### 2.1. Memória Volátil: RAM
 
-Essa memória é a mais reconhecida como "memória" quando falamos de **computadores**. Quando falamos sobre um "notebook de 16 gigas", normalmente essa é a quantidade de memória RAM que o computador tem.
+Essa memória é a mais reconhecida como "memória" quando falamos de **computadores**.
+
+:::warning[Atenção]
+Quando falamos sobre um "notebook de 16 gigas", normalmente essa é a quantidade de **memória RAM** que o computador tem.
+:::
 
 A memória RAM é um tipo especial de memória que é muito, muito rápida. Essa velocidade vem ao "custo" de algumas coisas:
 
@@ -71,6 +89,41 @@ Mas e se você etiquetar todos os lugares para guardar as coisas: A1, A2, A3, ..
 Organizado? Nem tanto... Rápido? Bastante 😅
 :::
 
+:::info[Importante]
+Um computador pode ter mais de 1 memória RAM, e elas funcionam em conjunto: se você tem 2 memórias de 8 GB, para os programas (incluindo o Sistema Operacional) é **como se fosse apenas 1 memória de 16 GB.**
+:::
+
 ### 2.2. Memória Persistente: Disco Rígido
 
-a
+A segunda memória importante é o que chamamos de Disco Rígido, ou HD (do inglês **H**ard **D**rive). Essa memória é a mais reconhecida como "memória" quando falamos de celulares.
+
+:::warning[Atenção]
+Quando falamos sobre um "celular de 32 gigas", normalmente essa é a quantidade de memória do **disco rígido** que o celular tem.
+:::
+
+Já os disco rígidos são outro tipo especial de memória que consegue guardar informação por bastante tempo e até mesmo quando o computador está desligado. Essa capacidade vem ao "custo" de algumas coisas:
+
+1. **Menos Velocidade:** Como os dados precisam ser mantidos "para sempre", o disco rígido precisa de mais tempo para gravar e ler as informações gravadas nele;
+2. **Organização:** Pela necessidade de manter os dados, os discos rígidos obrigatoriamente necessitam de formas organizadas para guardar as informações. São os chamdos **Sistemas de Arquivos** (em inglês: File Systems);
+
+Esses "custos" são, também, o que tornam os disco rígidos maiores que as memórias RAM: por não precisarem serem tão rápidos quanto as memórias RAM, eles podem ser maiores: em 2025 é bem comum encontrar disco rígidos de 500 GB, até mesmo 1+ TB, já vi propagandas de discos de 20+ TB!
+
+:::info[Mas e os SSD e NVMe?]
+Atualmente (2025), existem novas tecnologias de disco rígido tomando o mercado:
+
+* **SSD (do inglês Solid State Drive):** *Discos de Estado Sólido*, são discos rígidos onde as informações são guardadas em placas internas. São especiais pois eles não têm partes móveis. São os mais recomendados para notebooks por serem compatíveis com os discos rígidos antigos e por não possuirem partes móveis, não tem problema usar o notebook em movimento.
+* **NVMe (do inglês Non-Volatile Memory Express)**: *Memória Não-Volátil Expressa*, funcionalmente elas são bem semelhantes a SSDs, mas a forma de ligar o disco rígido na placa-mãe é diferente e, por isso, podem alcançar velocidades maiores que os SSDs.
+
+Qual a melhor? Não é parte desse curso, pois para programas esse tipo de coisa é totalmente transparente: programas mandam o Sistema Operacional gravar arquivos no disco rígido e ler arquivos do disco rígido. Coisas como o Sistema de Arquivos ou a tecnologia do disco rígido não afetam nem mudam nada.
+:::
+
+## Resumo
+
+Antes de continuarmos, aqui está um resumo do que vimos:
+
+* Sistema Operacional é um programa especial que controla 
+* **CPU** é o componente eletrônico que "pensa": Faz operações matemáticas e comparações lógicas
+* **Memória RAM** é o componente que "lembra": Apesar de perder toda a informação quando o computador desliga, enquanto ele está ligado as informações que estão sendo trabalhadas ficam aqui.
+* **Disco Rígido** é o outro componente que "lembra": A função do disco rígido é guardar informação de forma duradoura, mesmo quando o computador é desligado.
+
+Agora vamos começar mesmo a jornada da programação 😉
