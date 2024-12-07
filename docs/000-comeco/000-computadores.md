@@ -18,10 +18,6 @@ keywords:
 
 Computadores e celulares são máquinas eletrônicas bastante complexas. Elas precisam não apenas de partes físicas como chips, fios, placas, etc. mas também de um sistema que organize o funcionamento de todas essas partes para que, juntas, elas consigam fazer o que os programas pedem.
 
-Se compararmos um computador/celular a uma pessoa, nosso Cérebro seria o **Sistema Operacional**. Nosso cérebro é quem coordena o funcionamento de todos as nossas partes físicas como braços, pernas, músculos, dedos, pulmões, coração, digestão, etc.
-
-Em um computador/celular, o "cérebro" é o **Sistema Operacional**: um programa especial cuja função é organizar como todas as partes de um computador funcionam umas com as outras e como os programas normais interagem com a máquina e com outros programas.
-
 :::info[Mas porque falar de celulares?]
 Para os programas, não importa tanto se eles estão sendo executados em um computador ou em um celular, os dois são computadores - a diferença é apenas que **os celulares modernos são computadores** portáteis.
 
@@ -36,7 +32,21 @@ Em breve vamos falar sobre unidades de medida digitais. Por hora, basta saber qu
 * **TB:** Tera Byte - 1 TB = 1000 GB
 :::
 
-## 1. CPU
+## 1. Sistema Operacional
+
+Se compararmos um computador/celular a uma pessoa, nosso Cérebro seria o **Sistema Operacional**. Nosso cérebro é quem coordena o funcionamento de todos as nossas partes físicas como braços, pernas, músculos, dedos, pulmões, coração, digestão, etc.
+
+Em um computador/celular, o "cérebro" é o **Sistema Operacional**: um programa especial cuja função é organizar como todas as partes de um computador funcionam umas com as outras e como os programas normais interagem com a máquina e com outros programas.
+
+Apesar de existirem muitos Sistemas Operacionais, na grande maioria do tempo vamos lidar com apenas 3 quando falamos de computadores e 2 quando falamos de celulares:
+
+* **Microsoft Windows *(pronúncia: "uindous")*:** Em 2025 ainda é, de longe, o mais conhecido e utilizado. Bastante fácil de ser utilizado e, para programadores, conhecido por ter retro-compatibilidade: boa parte dos programas feitos para o Windows 95 (lançado em 1995) ainda funcionam no Windows 11 (lançado em 2021). Atualmente (2025) ele está na versão 11;
+* **Linux *(pronúncia: "linuks")*:** Um sistema operacional feito para ser eficiente e por esta razão é um dos mais utilizados em Servidores *(um tipo especial de computador que conheceremos no futuro do curso)*. É um dos preferidos por programadores por permitir um controle maior e mais preciso de todas as partes do sistema;
+* **MacOS *(pronúncia: "mék-ô-esse")*:** Normalmente chamado apenas de Mac. É o sistema operacional dos computadores da Apple. Derivado de um outro sistema operacional "irmão" do Linux chamado BSD, mas o foco maior desse sistema é ser fácil de usar ao mesmo tempo que tirando o máximo do computador. Funciona apenas em computadores da Apple.
+* **Android *(pronúncia: "endróid")*:** Sistema Operacional projeto para funcionar em muitos modelos diferentes de celulares. Criado apartir do Linux pelo Google. É o sistema operacional mais utilizado em celulares, onde praticamente qualquer celular que não seja da Apple (iPhone) muito provavelmente estará usando o Android.
+* **iOS *(pronúncia: "ái-ô-esse")*:** Sistema Operacional para celulares da Apple, ou seja, os iPhones.
+
+## 2. CPU
 
 Uma das partes mais conhecidas e certamente uma que vamos ouvir falar bastante nessa jornada é a CPU.
 
@@ -46,7 +56,7 @@ Vamos ouvir muito, também, que a CPU é o cérebro do computador. De certa form
 
 Entretanto, nosso cérebro não é apenas uma coisa que pensa. Também temos uma coisa muito importante chamada...
 
-## 2. Memória
+## 3. Memória
 
 Outra parte extremamente importante de qualquer computador é a sua memória. Não adianta nada conseguir fazer uma conta de matemática super rápido se você não vai conseguir lembrar do resultado 😂
 
@@ -57,7 +67,7 @@ Nos computadores atuais, temos 2 memórias principais:
 
 As duas servem para o mesmo propósito: guardar informação. A maior diferença entre elas é por quanto tempo elas conseguem guardar essas informações e o quão rápido elas conseguem fazer isso.
 
-### 2.1. Memória Volátil: RAM
+### 3.1. Memória Volátil: RAM
 
 Essa memória é a mais reconhecida como "memória" quando falamos de **computadores**.
 
@@ -93,7 +103,7 @@ Organizado? Nem tanto... Rápido? Bastante 😅
 Um computador pode ter mais de 1 memória RAM, e elas funcionam em conjunto: se você tem 2 memórias de 8 GB, para os programas (incluindo o Sistema Operacional) é **como se fosse apenas 1 memória de 16 GB.**
 :::
 
-### 2.2. Memória Persistente: Disco Rígido
+### 3.2. Memória Persistente: Disco Rígido
 
 A segunda memória importante é o que chamamos de Disco Rígido, ou HD (do inglês **H**ard **D**rive). Essa memória é a mais reconhecida como "memória" quando falamos de celulares.
 
@@ -121,9 +131,9 @@ Qual a melhor? Não é parte desse curso, pois para programas esse tipo de coisa
 
 Antes de continuarmos, aqui está um resumo do que vimos:
 
-* Sistema Operacional é um programa especial que controla 
-* **CPU** é o componente eletrônico que "pensa": Faz operações matemáticas e comparações lógicas
-* **Memória RAM** é o componente que "lembra": Apesar de perder toda a informação quando o computador desliga, enquanto ele está ligado as informações que estão sendo trabalhadas ficam aqui.
-* **Disco Rígido** é o outro componente que "lembra": A função do disco rígido é guardar informação de forma duradoura, mesmo quando o computador é desligado.
+* **Sistema Operacional** é um programa especial que controla todo o computador ou celular;
+* **CPU** é o componente eletrônico que "pensa": Faz operações matemáticas e comparações lógicas;
+* **Memória RAM** é o componente que "lembra": Apesar de perder toda a informação quando o computador/celular desliga, enquanto ele está ligado as informações que estão sendo trabalhadas ficam aqui;
+* **Disco Rígido** é o outro componente que "lembra": A função do disco rígido é guardar informação de forma duradoura, mesmo quando o computador/celular é desligado.
 
 Agora vamos começar mesmo a jornada da programação 😉
