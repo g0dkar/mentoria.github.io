@@ -1,6 +1,6 @@
 ---
-sidebar_position: 2
-title: Começo
+sidebar_position: 0
+title: Começo - O Básico
 description: Começamos aprendendo o que são Computadores e Celulares
 keywords:
   - mentoria

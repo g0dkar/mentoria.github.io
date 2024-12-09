@@ -2,23 +2,13 @@
 sidebar_position: 10
 title: Zeros e 1s
 description: Vamos aprender o que são os 0s e 1s que tanto vemos por aí
-keywords:
-  - mentoria
-  - cloud
-  - aprender
-  - programar
-  - do zero
-  - computador
-  - celular
-  - software
-  - hardware
 ---
 
 # Zeros e 1s
 
 Vamos agora começar os primeiros passos de fato na nossa jornada! Para um computador, tudo são 0s e 1s!
 
-## 1. Como *nós* entendemos números
+## 1. Como _nós_ entendemos números
 
 Nós, humanos, usamos o que se chama de **Sistema Decimal:** quase todos nós temos **10 dedos** e por esta razão o sistema decimal tem 10 números: 0, 1, 2, 3, 4, 5, 6, 7, 8 e 9.
 
@@ -32,7 +22,7 @@ Apesar de ser natural depois de anos utilizando, vale lembrar que o sistema deci
 
 Com isso em mente, vamos ver como computadores entendem números.
 
-## 10. O Sistema *Binário*
+## 10. O Sistema _Binário_
 
 Diferente de nós, computadores não tem 10 dedos. Eles tem o que chamamos de transístores. São minúsculos componentes que tem a característica de poderem ser **ligados e desligados** e conseguem dizer a outros componentes se estão ligados e desligados.
 
@@ -62,7 +52,7 @@ Tem uma velha piadoca de programadores que diz: **Existem apenas `10` tipos de p
 Usando a cola acima... `10` em binário é qual número decimal? 😉
 :::
 
-## 11. Convertendo Binários em Decimais *(Opcional)*
+## 11. Convertendo Binários em Decimais _(Opcional)_
 
 :::note[Essa parte é **opcional mas muito recomendada**]
 Se preferir ir para a próxima sem problema!
@@ -74,8 +64,8 @@ Um efeito colateral bom do fato de computadores usarem números binários é que
 
 Para cada dígito binário, vamos transformar ele em `(n * 2^p)` onde:
 
-* `n` é o próprio número: Se for `1` então `n = 1`. Se for `0` então `n = 0`;
-* `p` é a ***posição*** do número **menos 1**: É o **3o** número? Então `p = 2`. **Importante:** as posições são contadas da direita para esquerda (do final para o começo)! Ou seja, em `100` a primeira posição (`p = 0`) é `0`, a segunda posição (`p = 1`) é `0` e a terceira posição (`p = 2`) é `1`!
+-   `n` é o próprio número: Se for `1` então `n = 1`. Se for `0` então `n = 0`;
+-   `p` é a **_posição_** do número **menos 1**: É o **3o** número? Então `p = 2`. **Importante:** as posições são contadas da direita para esquerda (do final para o começo)! Ou seja, em `100` a primeira posição (`p = 0`) é `0`, a segunda posição (`p = 1`) é `0` e a terceira posição (`p = 2`) é `1`!
 
 Com essas fórmulas para cada dígito basta **somar** tudo!
 
@@ -84,7 +74,7 @@ Apesar do formato diferente, a fórmula é o jeito "normal" para um programador 
 
 Esse circunflexo é o sinal usado para indicar que um número está sendo elevado a outro. `2 ^ 3 = 2³`. Vamos ver mais sobre isso no futuro.
 
-Caso esteja lendo outros conteúdos, alguns preferem usar `pow(2, 3) = 2³` - significa a mesma coisa, só que escrito diferente. Esse `pow` vem de **pow**er, a palavra em inglês para "elevado a" (2³ em inglês se diz "2 to the ***power*** of 3")
+Caso esteja lendo outros conteúdos, alguns preferem usar `pow(2, 3) = 2³` - significa a mesma coisa, só que escrito diferente. Esse `pow` vem de **pow**er, a palavra em inglês para "elevado a" (2³ em inglês se diz "2 to the **_power_** of 3")
 :::
 
 Vamos ver alguns exemplos:
@@ -110,16 +100,20 @@ Como diversão e desafio, deixo uma coincidência interessante: todo número dec
 
 ## 100. Números hexadecimais
 
-Por fim, vamos falar um pouco de números ***hexa***decimais. O prefixo hexa significa "6" (seis). O sistema de números hexadecimais nada mais é que um que contém 16 números!
+Por fim, vamos falar um pouco de números **_hexa_**decimais. O prefixo hexa significa "6" (seis). O sistema de números hexadecimais nada mais é que um que contém 16 números!
 
 Esse sistema também é conhecido como **Base 16**.
 
 Você deve se perguntar: o que vem depois do 9 então? E a resposta é meio intuitiva e engraçada: A. O sistema de números hexadecimal adota os 10 dígitos do decimal: `0` a `9` e complementa os 6 faltantes com `A, B, C, D, E, F`.
 
+**Vale lembrar que não importa se você escreve com minúsculas ou maiúsculas: `1ab2` é o mesmo que `1AB2` 😉**
+
 :::danger[Atenção!]
 **Números hexadecimais na programação são sempre escritos e representados com o prefixo `0x` (zero + xis).**
 
-Dessa forma é possível saber se `10` é o número decimal `10` ou na verdade é o número ***hexa***decimal `10`, que é o número decimal **16**!
+Dessa forma é possível saber se `10` é o número decimal `10` ou na verdade é o número **_hexa_**decimal `10`, que é o número decimal **16**!
+
+A partir desse ponto, nesse curso, eles ***sempre*** estarão prefixados com `0x` 👀
 :::
 
 Isso significa que, em hexadecimal, `9 + 1 = 0xA`, `0xA + 1 = 0xB`, `0xB + 1 = 0xC`, ..., `0xF + 1 = 0x10`
@@ -128,10 +122,26 @@ Como nós humanos usamos e entendemos números decimais, a conversão entre núm
 
 A explicação vem de uma outra coincidência interessante:
 
-```text
-Considere o número 10001111 em binário.
+| Binário | Decimal | Hexadecimal |
+| ------- | ------- | ----------- |
+| `0000`  | `0`     | `0x0`       |
+| `0001`  | `1`     | `0x1`       |
+| `0010`  | `2`     | `0x2`       |
+| `0011`  | `3`     | `0x3`       |
+| ...     | ...     | ...         |
+| `1100`  | `12`    | `0xC`       |
+| `1101`  | `13`    | `0xD`       |
+| `1110`  | `14`    | `0xE`       |
+| `1111`  | `15`    | `0xF`       |
 
-Convertendo ele para decimal, vemos que isso é igual ao núemro 143.
+**Cada dígito hexadecimal corresponde perfeitamente a 4 dígitos binários!**
 
-Em hexadecimal, F = 15. Esse mesmo número pode ser escrito como 0xF.
-```
+nNas próximas aulas vamos entender o porque de 4 dígitos binários serem tão importantes.
+
+## Resumo
+
+Nessa página, vimos sobre:
+
+* **Sistema decimal:** São os números que conhecemos e usamos no nosso dia-a-dia
+* **Sistema binário:** São representações dos números decimais só que no sistema binário, que utiliza apenas `0` e `1`
+* **Sistema hexadecimal:** Um sistema numérico que é bastante útil quando se precisa trabalhar com binários e converter em decimais. Composto de 16 números: `0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `A`, `B`, `C`, `D`, `E`, `F` e sempre representado com `0x` antes do número, por exemplo: `0xC0FFEE`.

@@ -2,16 +2,6 @@
 sidebar_position: 0
 title: Computadores e Celulares
 description: Começamos aprendendo o que são Computadores e Celulares
-keywords:
-  - mentoria
-  - cloud
-  - aprender
-  - programar
-  - do zero
-  - computador
-  - celular
-  - software
-  - hardware
 ---
 
 # Começando do começo: Computadores e Celulares

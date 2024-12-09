@@ -1,12 +1,7 @@
 ---
-sidebar_position: 1
+sidebar_position: -1
+title: Introdução
 description: Introdução ao Mentoria Cloud - Aprendendo a Programar do Zero
-keywords:
-  - mentoria
-  - cloud
-  - aprender
-  - programar
-  - do zero
 ---
 
 # Introdução
