@@ -1,6 +1,6 @@
 ---
 sidebar_position: 10
-title: Zeros e 1s
+title: 1 - Zeros e 1s
 description: Vamos aprender o que são os 0s e 1s que tanto vemos por aí
 ---
 
@@ -72,9 +72,9 @@ Com essas fórmulas para cada dígito basta **somar** tudo!
 :::tip[Não entendeu a fórmula?]
 Apesar do formato diferente, a fórmula é o jeito "normal" para um programador escrever: `n multiplicado por 2 elevado a p`.
 
-Esse circunflexo é o sinal usado para indicar que um número está sendo elevado a outro. `2 ^ 3 = 2³`. Vamos ver mais sobre isso no futuro.
+Esse circunflexo é o sinal usado para indicar que um número está sendo elevado a outro. `2 ^ 3 = 2<sup>3</sup>`. Vamos ver mais sobre isso no futuro.
 
-Caso esteja lendo outros conteúdos, alguns preferem usar `pow(2, 3) = 2³` - significa a mesma coisa, só que escrito diferente. Esse `pow` vem de **pow**er, a palavra em inglês para "elevado a" (2³ em inglês se diz "2 to the **_power_** of 3")
+Caso esteja lendo outros conteúdos, alguns preferem usar `pow(2, 3) = 2<sup>3</sup>` - significa a mesma coisa, só que escrito diferente. Esse `pow` vem de **pow**er, a palavra em inglês para "elevado a" (2<sup>3</sup> em inglês se diz "2 to the **_power_** of 3")
 :::
 
 Vamos ver alguns exemplos:
@@ -136,12 +136,18 @@ A explicação vem de uma outra coincidência interessante:
 
 **Cada dígito hexadecimal corresponde perfeitamente a 4 dígitos binários!**
 
-nNas próximas aulas vamos entender o porque de 4 dígitos binários serem tão importantes.
+Nas próximas aulas vamos entender o porque de 4 dígitos binários serem tão importantes.
 
 ## Resumo
 
+:::info[E como representamos que um número é binário?]
+Por mais estranho que pareça, não existe uma forma padrão para representar que um número escrito é binário.
+
+Isso se dá porque raramente, muito raramente mesmo, precisamos utilizar a representação binária de números. Normalmente quando precisamos, usamos alguns números decimais decorados como os números de 0 a 7. Esses números, em binário, são os números `000` a `111`.
+:::
+
 Nessa página, vimos sobre:
 
-* **Sistema decimal:** São os números que conhecemos e usamos no nosso dia-a-dia
-* **Sistema binário:** São representações dos números decimais só que no sistema binário, que utiliza apenas `0` e `1`
+* **Sistema decimal:** São os números que conhecemos e usamos no nosso dia-a-dia;
+* **Sistema binário:** São representações dos números decimais só que no sistema binário, que utiliza apenas `0` e `1`;
 * **Sistema hexadecimal:** Um sistema numérico que é bastante útil quando se precisa trabalhar com binários e converter em decimais. Composto de 16 números: `0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `A`, `B`, `C`, `D`, `E`, `F` e sempre representado com `0x` antes do número, por exemplo: `0xC0FFEE`.

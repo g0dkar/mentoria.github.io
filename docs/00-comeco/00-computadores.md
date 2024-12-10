@@ -1,6 +1,6 @@
 ---
 sidebar_position: 0
-title: Computadores e Celulares
+title: 0 - Computadores e Celulares
 description: Começamos aprendendo o que são Computadores e Celulares
 ---
 
