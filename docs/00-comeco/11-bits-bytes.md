@@ -10,29 +10,29 @@ Agora que sabemos sobre os sistemas decimal, binário e hexadecimal, vamos apren
 
 ## 1. Bit
 
-> *Pronunciado: "bít"*
+> _Pronunciado: "bít"_
 
 A menor unidade de informação que existe num computador é o Bit. Um bit é apenas um único número binário: `0` ou `1`. Por exemplo, o número binário `1011` tem **4 bits**.
 
 ## 2. Byte
 
-> *Pronunciado: "báit"*
+> _Pronunciado: "báit"_
 
 Um byte é simplesmente um conjunto de **8 bits**. Para facilitar a leitura, normalmente números binários são escritos em grupos de 4 dígitos, por exemplo: `1001 1010` - um byte que representa o número **154**.
 
-Porque ***4 dígitos***? Como vimos anteriormente, 1 dígito hexadecimal consegue representar pefeitamente 4 bits!
+Porque **_4 dígitos_**? Como vimos anteriormente, 1 dígito hexadecimal consegue representar pefeitamente 4 bits!
 
 Usando nosso exemplo de `1001 1010` podemos escrever ele em hexadecimal com apenas 2 dígitos: `0x9A`. Essa facilidade de conversão se dá tanto para converter binário em hexadecimal quanto o contrário!
 
 :::tip[Desafio]
 Como exercício, tente converter os seguintes números:
 
-- `0x123`: hexa -> binário
-- `1111 1010 0001 0101 1100 1010`: binário -> hexa
-- `0xCAFE`: hexa -> binário
-- `0x1010`: hexa -> binário
-- `0001 0000`: binário -> hexa
-:::
+-   `0x123`: hexa -> binário
+-   `1111 1010 0001 0101 1100 1010`: binário -> hexa
+-   `0xCAFE`: hexa -> binário
+-   `0x1010`: hexa -> binário
+-   `0001 0000`: binário -> hexa
+    :::
 
 ## 3. Antes de continuarmos...
 
@@ -42,8 +42,47 @@ Esses números são propositais: 4 = 2<sup>2</sup>, 8 = 2<sup>3</sup>, 16 = 2<su
 
 O resumo da longa história sobre isso é que é mais fácil e cômodo usar potências de 2 (2 elevado a algum número): 1 byte é formado por 8 bits (2<sup>3</sup>), processadores atuais são conhecidos como "64 bits" (2<sup>6</sup>), memórias RAM vem em 4GB (2<sup>2</sup>), 6GB (2<sup>2</sup> + 2<sup>1</sup>), 8GB (2<sup>3</sup>), 16GB (2<sup>4</sup>), discos rígidos vem em 128GB (2<sup>7</sup>), 256GB (2<sup>8</sup>), 512GB (2<sup>8</sup>) e assim vai.
 
-Caso queira compreender um pouco mais, tente converter 2<sup>2</sup>, 2<sup>3</sup>, 2<sup>4</sup> para binário 😉
+Como uma curiosidade:
+
+-   2<sup>1</sup> em binário é `0000 0010` (`1` e 1 `0`)
+-   2<sup>2</sup> em binário é `0000 0100` (`1` e 2 `0`)
+-   2<sup>3</sup> em binário é `0000 1000` (`1` e 3 `0`)
+-   2<sup>4</sup> em binário é `0001 0000` (`1` e 4 `0`)
+-   2<sup>5</sup> em binário é `0010 0000` (`1` e 5 `0`)
+-   Etc... :wink:
 
 ## 4. Kilobytes, Megabytes, Gigabytes
 
-asd
+Agora que sabemos o que são os bytes, vamos ver o que são os famosos "K-bytes", megabytes, gigabytes e por aí vai.
+
+Essas são **unidades de medida de tamanho digital**: considerando que 1 transístor representa 1 bit, e 4 bits representam 1 byte... quantos transístores são necessários para armazenar uma dada informação?
+
+Esses prefixos quilo (ou kilo), mega, giga são os mesmos que usamos no nosso dia-a-dia: um **quilo**grama de arroz nada mais é que **1000 gramas** de arroz.
+
+Semelhante ao grama e quilogramas, nossas unidades de medida **têm o byte como base**, por isso que são kilo*bytes*, mega*bytes*, giga*bytes*, ...
+
+Essas unidades digitais, porém, são normalmente contadas de uma **forma binária** (ou seja, com base no número 2): 1 B = **2<sup>0</sup> bytes**, 1 KB = 1024 B = **2<sup>10</sup> B**, 1 MB = 1024 KB = **2<sup>100</sup> B**.
+
+Algumas pessoas preferem utilizar a **forma decimal** (ou seja, com base no número 10) para contar esses tamanhos. A vantagem de utilizar essa forma é que as coisas ficam mais intuitivas: 1 B = **10<sup>0</sup> bytes**, 1 KB = 1000 B = **10<sup>3</sup> B**, 1 MB = 1000 KB = **10<sup>6</sup> B**.
+
+A diferença entre a forma binária e a forma decimal meio que se resume a: na forma binária, a próxima unidade é igual a **1024** da atual. Na forma decimal a próxima unidade é igual a **1000** da atual.
+
+A seguir temos uma tabela mostrando algumas das conversões entre as medidas mais comuns.
+
+| Prefixo       | Unidade | Valor binário                  | Valor decimal               |
+| ------------- | ------- | ------------------------------ | --------------------------- |
+| **Kilo**bytes | KB      | 1024 B = 2<sup>10</sup> B      | 1000 B = 10<sup>3</sup> B   |
+| **Mega**bytes | MB      | 1024 KB = 2<sup>100</sup> B    | 1000 KB = 10<sup>6</sup> B  |
+| **Giga**bytes | GB      | 1024 MB = 2<sup>1000</sup> B   | 1000 MB = 10<sup>9</sup> B  |
+| **Tera**bytes | TB      | 1024 GB = 2<sup>10000</sup> B  | 1000 GB = 10<sup>12</sup> B |
+| **Peta**bytes | PB      | 1024 TB = 2<sup>100000</sup> B | 1000 TB = 10<sup>15</sup> B |
+
+## Resumo
+
+Nesta aula vimos que:
+
+-   **Bits** são a menor unidade de informação, representados por um número `1` ou `0`
+-   **Bytes** são conjuntos de 4 bits. Eles conseguem representar os números decimais de `0` até `15` ou hexadecimais de `0x0` até `0xF`
+-   1 dígito hexadecimal é representado por 1 byte (`0000` = `0x0`, `1111` = `0xF`) e podemos facilmente converter entre hexadecimal e binário: `0x2F` = `0010 (2) 1111 (F)`
+-   As unidades de medida de tamanho digital são contadas de forma **binária**: `1 KB = 1024 B`, `1 MB = 1024 KB = 1048576 B`, ...
+-   Existem pessoas que preferem o jeito **decimal** de contar: `1 KB = 1000 B`, `1 MB = 1000 KB = 1000000 B`, ...

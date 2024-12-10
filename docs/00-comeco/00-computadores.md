@@ -48,7 +48,7 @@ Entretanto, nosso cérebro não é apenas uma coisa que pensa. Também temos uma
 
 ## 3. Memória
 
-Outra parte extremamente importante de qualquer computador é a sua memória. Não adianta nada conseguir fazer uma conta de matemática super rápido se você não vai conseguir lembrar do resultado 😂
+Outra parte extremamente importante de qualquer computador é a sua memória. Não adianta nada conseguir fazer uma conta de matemática super rápido se você não vai conseguir lembrar do resultado :joy:
 
 Nos computadores atuais, temos 2 memórias principais:
 
@@ -86,7 +86,7 @@ Mas e se você etiquetar todos os lugares para guardar as coisas: A1, A2, A3, ..
 
 **Por exemplo:** João chegou pedindo para você guardar uma laranja. Você olhou e viu que a posição B7 está livre - mais rápido que organizar as coisas pela primeira letra do nome, por exemplo. Você coloca a laranja lá e entrega ao João um papel com B7 escrito nele. Algum tempo depois, ele volta com o papel. Imediatamente você sabe onde está o que João precisa: na posição B7!
 
-Organizado? Nem tanto... Rápido? Bastante 😅
+Organizado? Nem tanto... Rápido? Bastante :sweat_smile:
 :::
 
 :::info[Importante]
@@ -126,4 +126,4 @@ Antes de continuarmos, aqui está um resumo do que vimos:
 * **Memória RAM** é o componente que "lembra": Apesar de perder toda a informação quando o computador/celular desliga, enquanto ele está ligado as informações que estão sendo trabalhadas ficam aqui;
 * **Disco Rígido** é o outro componente que "lembra": A função do disco rígido é guardar informação de forma duradoura, mesmo quando o computador/celular é desligado.
 
-Agora vamos começar mesmo a jornada da programação 😉
+Agora vamos começar mesmo a jornada da programação :wink:

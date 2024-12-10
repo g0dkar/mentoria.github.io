@@ -49,7 +49,7 @@ E... é isso! Simples assim :)
 :::info[Você já pode fazer parte do *outro* grupo...]
 Tem uma velha piadoca de programadores que diz: **Existem apenas `10` tipos de pessoas no mundo. As que conhecem binário e as que não conhecem.**
 
-Usando a cola acima... `10` em binário é qual número decimal? 😉
+Usando a cola acima... `10` em binário é qual número decimal? :wink:
 :::
 
 ## 11. Convertendo Binários em Decimais _(Opcional)_
@@ -79,8 +79,8 @@ Caso esteja lendo outros conteúdos, alguns preferem usar `pow(2, 3) = 2<sup>3</
 
 Vamos ver alguns exemplos:
 
-```text
-Vamos converter 11101 de binário para decimal.
+```text title="11101 -> 29"
+Vamos converter 11101 de binário para decimal
 
 Temos 5 posições. Lembrando que elas são contadas da direita (final) para esquerda (começo).
 
@@ -106,14 +106,14 @@ Esse sistema também é conhecido como **Base 16**.
 
 Você deve se perguntar: o que vem depois do 9 então? E a resposta é meio intuitiva e engraçada: A. O sistema de números hexadecimal adota os 10 dígitos do decimal: `0` a `9` e complementa os 6 faltantes com `A, B, C, D, E, F`.
 
-**Vale lembrar que não importa se você escreve com minúsculas ou maiúsculas: `1ab2` é o mesmo que `1AB2` 😉**
+**Vale lembrar que não importa se você escreve com minúsculas ou maiúsculas: `1ab2` é o mesmo que `1AB2` :wink:**
 
 :::danger[Atenção!]
 **Números hexadecimais na programação são sempre escritos e representados com o prefixo `0x` (zero + xis).**
 
 Dessa forma é possível saber se `10` é o número decimal `10` ou na verdade é o número **_hexa_**decimal `10`, que é o número decimal **16**!
 
-A partir desse ponto, nesse curso, eles ***sempre*** estarão prefixados com `0x` 👀
+A partir desse ponto, nesse curso, eles ***sempre*** estarão prefixados com `0x` :eyes:
 :::
 
 Isso significa que, em hexadecimal, `9 + 1 = 0xA`, `0xA + 1 = 0xB`, `0xB + 1 = 0xC`, ..., `0xF + 1 = 0x10`
