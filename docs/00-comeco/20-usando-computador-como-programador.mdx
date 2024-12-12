@@ -78,23 +78,158 @@ A seguir temos instruções de como acessar o Terminal nos Sistemas Operacionais
     Quase todas as "versões" diferentes (chamadas "distro") que tem interface visual têm um programa chamado **Terminal** (ou variações como `Konsole` ou `XTerm`) para dar acesso a ele. Se sua distro não tem interface visual... parabéns! Você já está no Terminal :smile:
   </TabItem>
   <TabItem value="mac" label="Mac">
-    O Mac também conta com um programa de Terminal, convenientemente chamado Terminal :smile:
+    O Mac conta com um programa de Terminal, convenientemente chamado **Terminal** :smile: - a forma mais conveniente de abri-lo é usar o atalho Command+Espaço e digitar `Terminal`.
 
     Caso queira um programa com mais configurações e opções, recomendo instalar um o [iTerm2](https://iterm2.com/).
+
+    ![Onde encontrar o Terminal no Mac](img/20-mac-terminal-app.png "Imagem mostrando onde encontrar o Terminal do Mac")
+
+    *Imagem retirada de: https://appletoolbox.com/use-the-mac-terminal-the-basics/*
   </TabItem>
   <TabItem value="android" label="Android">
-    Android
+    O Android, apesar de ser Linux por trás dos panos, não trás por padrão um Terminal. Porém existem vários apps que podem dar essa funcionalidade.
+
+    Dentre esses apps, recomendamos o [**Termux**](https://play.google.com/store/apps/details?id=com.termux&hl=pt-BR).
+
+    ![Imagem mostrando o aplicativo Termux](img/20-android-termux.png "Imagem mostrando o aplicativo Termux")
+
+    *Imagem retirada da Google Play Store (Loja de Aplicativos)*
   </TabItem>
   <TabItem value="ios" label="iOS">
-    iOS
+    O iOS, apesar der ser semelhante ao Linux por trás dos panos, não trás por padrão um Terminal. Porém existem vários apps que podem dar essa funcionalidade.
+
+    Dentre esses apps, recomendamos o [**a-Shell**](https://apps.apple.com/us/app/a-shell/id1473805438).
+
+    ![Imagem mostrando o aplicativo a-Shell](img/20-ios-ashell.png "Imagem mostrando o aplicativo a-Shell")
+
+    *Imagem retirada da Apple Store (Loja de Aplicativos)*
   </TabItem>
 </Tabs>
 
-#### 1.2.1. Microsoft Windows
+--------------------------
 
-Como o sistema operacional mais utilizado atualmente é o Microsoft Windows, vamos começar por ele.
+### 1.3. Pastas/Diretórios e Arquivos
 
-### 1.3. Como usar uma linha de comando?
+Antes de partirmos para aprender os componentes que compõem uma linha de comando, vamos rever os conceitos de **Pastas/Diretórios** e **Arquivos**.
+
+Esses conceitos vêm da forma como escritórios costumavam organizar seus documentos: uma série de papéis (arquivos) ficam guardados em uma *pasta organizadora* ou gaveta.
+
+Essas ideias se mantém ainda hoje. **Arquivos** são onde nossas informações são guardadas: imagens, documentos, programas, etc.
+
+Todo Arquivo obrigatoriamente TEM QUE estar dentro de uma pasta/diretório. Opcionalmente, cada pasta/diretório pode estar dentro de outra pasta/diretório:
+
+A seguir, podemos ver uma ***navegação*** entre pastas/diretórios no Windows Explorer:
+
+![Navegação entre pastas/diretórios no Windows Explorer](img/20-windows-pastas.gif "Navegação entre pastas no Windows Explorer")
+
+Nesta animação navegamos de `C:\`, que é o diretório-base do disco `C:`, e entramos no diretório `tools`, em seguida no diretório `vim` e por fim depois no diretório `vim90`.
+
+**Tenha isso em mente, pois é bastante importante :wink: - E lembre-se que os termos "pasta" e "diretório" são a mesma coisa!**
+
+:::info[Unidades de Disco]
+O Windows conta com uma forma bem diferente de funcionar em comparação aos outros Sistemas Operacionais.
+
+Primeiramente, no Windows existe o conceito de [**Unidade de Disco**](https://pt.wikipedia.org/wiki/Unidade_de_disco_r%C3%ADgido), que nada mais é que um Disco Rígido que é tratado separado dos outros.
+
+Eles são referenciados a partir de letras que começam em `C` e sempre são acompanhados de um `:` em seguida da letra:
+
+![Imagem com 3 unidades de disco: C:, D: e E:](img/20-windows-drives.png "Imagem com 3 unidades de disco: C:, D: e E:")
+
+Nesta imagem vemos 3 unidades: `C:`, `D:` e `E:`. Todos os caminhos de pastas/diretórios no Windows vão começar com a letra do disco. Por exemplo: na animação acima navegamos para `C:\tools\vim\vim90`.
+:::
+
+### 1.4. Elementos que compõem uma linha de comando
+
+Vamos ver agora os elementos que compõem uma linha de comando.
+
+Todas as linhas de comando vão ter pelo menos 2 elementos principais:
+
+- **"Onde" você está:** Pense em quantas coisas você faz em um computador envolvem arquivos. Como no Terminal vamos mandar comandos diretamente ao computador, não temos a facilidade de ter uma informação mais visual de que arquivos queremos ler ou salvar. Por esta razão, a linha de comando sempre se vincula a alguma pasta do seu computador. O "onde" é justamente isso: **dentro de qual pasta estamos no momento?**
+- **A partir de que ponto você pode escrever:** Como tudo é texto, precisamos saber onde que começa o nosso texto e o texto do próprio terminal :smile: - Geralmente é um dos seguintes caracteres: `>`, `$` ou `#`
+
+A seguir temos explicações e descrições das linhas de comando mais comuns: estilo Windows e estilo Linux (se aplica a todos que não são o Windows).
+
+<Tabs groupId="os" queryString>
+  <TabItem value="windows" label="Windows" default>
+    Os dois programas de Terminal do Windows, o `cmd` (Prompt de Comandos) e o [PowerShell](https://learn.microsoft.com/pt-br/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4#installing-the-msi-package), têm a mesma estrutura de linha:
+
+    ![Terminal do PowerShell](img/20-windows-shell.png "Prompt de Comando do PowerShell")
+
+    Como dizia Jack, O Estripador: Vamos por partes. Nossa linha é `PS C:\tools>`
+
+    1. O prefixo `PS` indica que estamos utilizando o PowerShell ao invés do `cmd`. No `cmd` não há prefixo algum.
+    2. Em seguida vem onde estamos: `C:\tools` - Estamos dentro da pasta `tools`, a qual está dentro da raíz do disco `C:`.
+    3. Por fim, vem o indicador de onde começa o nosso texto: `>` (um sinal de "maior que")
+
+    Uma facilidade trazida pelo PowerShell é que ele destaca qual comando será executado ao se pressionar Enter:
+
+    ![Terminal PowerShell com um comando ping sendo demonstrado](img/20-windows-shell2.png "Prompt de Comando do PowerShell com um comando ping sendo demonstrado")
+
+    Ao pressionar Enter, o comando executado será o comando `ping`, e o resto da linha são os parâmetros do comando.
+  </TabItem>
+  <TabItem value="linux" label="Linux">
+    No Linux e variantes, o Terminal é bem mais avançado que no Windows.
+
+    ![Terminal do Linux mostrando a Linha de Comando](img/20-linux-terminal.png "Terminal do Linux mostrando a Linha de Comando")
+
+    Como dizia Jack, O Estripador: Vamos por partes. Nossa linha é `rafael@Desktop-Nihillus:~$`
+
+    Nessa linha de comando temos 2 partes: uma antes do `:` e outra depois.
+
+    1. Normalmente os Terminais do Linux são bem integrados para acessar, também, **computadores remotos**. A primeira parte da linha de comando diz qual nosso usuário no sistema e qual sistema estamos: `rafael@Desktop-Nihillus` - Sou o usuário `rafael` e estou no computador `Desktop-Nihillus` (meu computador). O símbolo `@` significa "está em".
+    2. Logo em seguida temos `:~`. Esse `:` é o divisor entre `<quem-é-você>` e `<onde-você-está>`. O `~` (til) é uma pasta especial nestes sistemas. Esse `~` significa sua pasta pessoal. É equivalente ao diretório `/home/<seu-usuário>`.
+    <br/>Se executarmos o comando `pwd`, comando para mostrar o diretório onde estamos, o diretório impresso é `/home/rafael`:
+    <br/>![Execução do comando pwd no Terminal do Linux](img/20-linux-pwd.gif "Execução do comando pwd no Terminal do Linux")
+    3. Por fim, temos o caractere que mostra que a partir daquele ponto é nosso texto: `$`. Vale salientar que no Linux e semelhantes, são usados 2 caracteres diferentes: `$` (cifrão) e `#` (cerquilha). O cifrão é usado quando o usuário atual NÃO tem permissões administrativas. Já a cerquilha é usada quando o usuário tem permissões administrativas.
+  </TabItem>
+  <TabItem value="mac" label="Mac">
+    No Linux e variantes, o Terminal é bem mais avançado que no Windows.
+
+    ![Terminal do Linux mostrando a Linha de Comando](img/20-linux-terminal.png "Terminal do Linux mostrando a Linha de Comando")
+
+    Como dizia Jack, O Estripador: Vamos por partes. Nossa linha é `rafael@Desktop-Nihillus:~$`
+
+    Nessa linha de comando temos 2 partes: uma antes do `:` e outra depois.
+
+    1. Normalmente os Terminais do Linux são bem integrados para acessar, também, **computadores remotos**. A primeira parte da linha de comando diz qual nosso usuário no sistema e qual sistema estamos: `rafael@Desktop-Nihillus` - Sou o usuário `rafael` e estou no computador `Desktop-Nihillus` (meu computador). O símbolo `@` significa "está em".
+    2. Logo em seguida temos `:~`. Esse `:` é o divisor entre `<quem-é-você>` e `<onde-você-está>`. O `~` (til) é uma pasta especial nestes sistemas. Esse `~` significa sua pasta pessoal. É equivalente ao diretório `/home/<seu-usuário>`.
+    <br/>Se executarmos o comando `pwd`, comando para mostrar o diretório onde estamos, o diretório impresso é `/home/rafael`:
+    <br/>![Execução do comando pwd no Terminal do Linux](img/20-linux-pwd.gif "Execução do comando pwd no Terminal do Linux")
+    3. Por fim, temos o caractere que mostra que a partir daquele ponto é nosso texto: `$`. Vale salientar que no Linux e semelhantes, são usados 2 caracteres diferentes: `$` (cifrão) e `#` (cerquilha). O cifrão é usado quando o usuário atual NÃO tem permissões administrativas. Já a cerquilha é usada quando o usuário tem permissões administrativas.
+  </TabItem>
+  <TabItem value="android" label="Android">
+    No Linux e variantes, o Terminal é bem mais avançado que no Windows.
+
+    ![Terminal do Linux mostrando a Linha de Comando](img/20-linux-terminal.png "Terminal do Linux mostrando a Linha de Comando")
+
+    Como dizia Jack, O Estripador: Vamos por partes. Nossa linha é `rafael@Desktop-Nihillus:~$`
+
+    Nessa linha de comando temos 2 partes: uma antes do `:` e outra depois.
+
+    1. Normalmente os Terminais do Linux são bem integrados para acessar, também, **computadores remotos**. A primeira parte da linha de comando diz qual nosso usuário no sistema e qual sistema estamos: `rafael@Desktop-Nihillus` - Sou o usuário `rafael` e estou no computador `Desktop-Nihillus` (meu computador). O símbolo `@` significa "está em".
+    2. Logo em seguida temos `:~`. Esse `:` é o divisor entre `<quem-é-você>` e `<onde-você-está>`. O `~` (til) é uma pasta especial nestes sistemas. Esse `~` significa sua pasta pessoal. É equivalente ao diretório `/home/<seu-usuário>`.
+    <br/>Se executarmos o comando `pwd`, comando para mostrar o diretório onde estamos, o diretório impresso é `/home/rafael`:
+    <br/>![Execução do comando pwd no Terminal do Linux](img/20-linux-pwd.gif "Execução do comando pwd no Terminal do Linux")
+    3. Por fim, temos o caractere que mostra que a partir daquele ponto é nosso texto: `$`. Vale salientar que no Linux e semelhantes, são usados 2 caracteres diferentes: `$` (cifrão) e `#` (cerquilha). O cifrão é usado quando o usuário atual NÃO tem permissões administrativas. Já a cerquilha é usada quando o usuário tem permissões administrativas.
+  </TabItem>
+  <TabItem value="ios" label="iOS">
+    No Linux e variantes, o Terminal é bem mais avançado que no Windows.
+
+    ![Terminal do Linux mostrando a Linha de Comando](img/20-linux-terminal.png "Terminal do Linux mostrando a Linha de Comando")
+
+    Como dizia Jack, O Estripador: Vamos por partes. Nossa linha é `rafael@Desktop-Nihillus:~$`
+
+    Nessa linha de comando temos 2 partes: uma antes do `:` e outra depois.
+
+    1. Normalmente os Terminais do Linux são bem integrados para acessar, também, **computadores remotos**. A primeira parte da linha de comando diz qual nosso usuário no sistema e qual sistema estamos: `rafael@Desktop-Nihillus` - Sou o usuário `rafael` e estou no computador `Desktop-Nihillus` (meu computador). O símbolo `@` significa "está em".
+    2. Logo em seguida temos `:~`. Esse `:` é o divisor entre `<quem-é-você>` e `<onde-você-está>`. O `~` (til) é uma pasta especial nestes sistemas. Esse `~` significa sua pasta pessoal. É equivalente ao diretório `/home/<seu-usuário>`.
+    <br/>Se executarmos o comando `pwd`, comando para mostrar o diretório onde estamos, o diretório impresso é `/home/rafael`:
+    <br/>![Execução do comando pwd no Terminal do Linux](img/20-linux-pwd.gif "Execução do comando pwd no Terminal do Linux")
+    3. Por fim, temos o caractere que mostra que a partir daquele ponto é nosso texto: `$`. Vale salientar que no Linux e semelhantes, são usados 2 caracteres diferentes: `$` (cifrão) e `#` (cerquilha). O cifrão é usado quando o usuário atual NÃO tem permissões administrativas. Já a cerquilha é usada quando o usuário tem permissões administrativas.
+  </TabItem>
+</Tabs>
+
+### 1.X. asd
 
 Como o nome deixa a entender, na interface de linha de _comando_ vamos executar **comandos**.
 
