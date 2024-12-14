@@ -19,7 +19,13 @@ Bom, como programadores nossa função é controlar a máquina para fazer com qu
 
 ## 1. Nossas ferramentas
 
-No geral, vamos utilizar bastante 2 ferramentas: a [**linha de comando**](https://pt.wikipedia.org/wiki/Interface_de_linha_de_comandos "Página da Wikipedia sobre Interfaces de Linha de Comando") e **monitores de processos**.
+No geral, vamos utilizar bastante 1 ferramenta: a [**linha de comando**](https://pt.wikipedia.org/wiki/Interface_de_linha_de_comandos "Página da Wikipedia sobre Interfaces de Linha de Comando").
+
+:::warning[ATENÇÃO!]
+Muita coisa nas outras partes da mentoria será feita via linha de comando, e vai assumir que você sabe utilizar mesmo que de forma bem básica a linha de comando.
+
+**Esta página ensina você o básico para se executar comandos.** Isso é importante para, num capítulo futuro, você não ficar perdido(a) quando ler algo como "E por fim, basta executar `npm run start`" :wink:
+:::
 
 ### 1.1. Linha de comando
 
@@ -277,6 +283,8 @@ Para dar comandos, basta digitar o nome do comando e pressionar enter. No vídeo
 
 ![Executando um comando ping](img/20-terminal-ping-vscode.gif "Terminal onde é digitado e executado o comando ping")
 
+A forma de escrever e executar comandos (apertando **Enter**) é igual em todos os Terminais.
+
 Toda linha é composta de:
 
 - **O comando que será executado:** Sempre a primeira palavra da linha é o comando que será executado. Vale salientar que nenhum comando tem "espaço" no nome. Muitos usam `hifens-como-espacos` ou `sublinhados_como_espacos`;
@@ -286,44 +294,64 @@ No exemplo acima, temos: `ping google.com` como nossa linha. A primeira palavra 
 
 Muitos dos parâmetros que os comandos esperam alteram como eles funcionam. Esses parâmetros normalmente começam com 1 ou 2 `-` (hífen) ou **apenas no caso de comandos antigos do Windows**, uma `/` (barra).
 
-Praticamente todos os comandos contam com uma sessão de ajuda. Você pode acessar essa ajuda com o parâmetro `-h`, `--help` ou no caso de comandos mais antigos do Windows, com `/?`:
+Praticamente todos os comandos contam com uma sessão de ajuda. Você pode acessar essa ajuda com o parâmetro `-?`, `-h`, `--help` *(do inglês help: ajuda, em português)* ou no caso de comandos mais antigos do Windows, com `/?`:
 
 ```text
-PS C:\Users\rafael> ping /?
+PS C:\tools> ping /?
 
-Usage: ping [-t] [-a] [-n count] [-l size] [-f] [-i TTL] [-v TOS]
-            [-r count] [-s count] [[-j host-list] | [-k host-list]]
-            [-w timeout] [-R] [-S srcaddr] [-c compartment] [-p]
-            [-4] [-6] target_name
+Uso: ping [-t] [-a] [-n count] [-l size] [-f] [-i TTL] [-v TOS]
+          [-r count] [-s count] [[-j host-list] | [-k host-list]]
+          [-w timeout] [-R] [-S srcaddr] [-c compartment] [-p]
+          [-4] [-6] target_name
 
-Options:
-    -t             Ping the specified host until stopped.
-                   To see statistics and continue - type Control-Break;
-                   To stop - type Control-C.
-    -a             Resolve addresses to hostnames.
-    -n count       Number of echo requests to send.
-    -l size        Send buffer size.
-    -f             Set Don't Fragment flag in packet (IPv4-only).
-    -i TTL         Time To Live.
-    -v TOS         Type Of Service (IPv4-only. This setting has been deprecated
-                   and has no effect on the type of service field in the IP
-                   Header).
-    -r count       Record route for count hops (IPv4-only).
-    -s count       Timestamp for count hops (IPv4-only).
-    -j host-list   Loose source route along host-list (IPv4-only).
-    -k host-list   Strict source route along host-list (IPv4-only).
-    -w timeout     Timeout in milliseconds to wait for each reply.
-    -R             Use routing header to test reverse route also (IPv6-only).
-                   Per RFC 5095 the use of this routing header has been
-                   deprecated. Some systems may drop echo requests if
-                   this header is used.
-    -S srcaddr     Source address to use.
-    -c compartment Routing compartment identifier.
-    -p             Ping a Hyper-V Network Virtualization provider address.
-    -4             Force using IPv4.
-    -6             Force using IPv6.
+Opções:
+    -t             Executa ping no host especificado até ser parado.
+                   Para ver as estatísticas e continuar, pressione
+                   Control-Break;
+                   Para parar, pressione Control-C.
+    -a             Resolve os endereços para nomes de host.
+    -n count       Número de solicitações de eco a serem enviadas.
+    -l size        Envia o tamanho de buffer.
+    -f             Define o sinalizador Não Fragmentar no pacote
+                   (somente IPv4).
+    -i TTL         Vida útil.
+    -v TOS         Tipo de Serviço (somente IPv4. Essa configuração
+                   foi preterida e não afeta o tipo de campo de serviço
+                   no Cabeçalho IP).
+    -r count       Registra a rota de saltos de contagem (somente IPv4).
+    -s count       Carimbo de data/hora para saltos de contagem (somente IPv4).
+    -j host-list   Rota de origem flexível em host-list (somente IPv4).
+    -k host-list   Rota de origem rígida em host-list (somente IPv4).
+    -w timeout     Tempo limite em milissegundos de espera por cada resposta.
+    -R             Usa o cabeçalho de roteamento para testar também a rota
+                   inversa (somente IPv6). Conforme RFC 5095, o uso desse
+                   cabeçalho de roteamento foi preterido. Alguns sistemas podem
+                   remover solicitações de eco se esse cabeçalho for usado.
+    -S srcaddr     Endereço de origem a ser usado.
+    -c compartment Identificador de compartimento de roteamento.
+    -p             Executa ping em um endereço de provedor de Virtualização
+                   de Rede Hyper-V.
+    -4             Força o uso de IPv4.
+    -6             Força o uso de IPv6.
 ```
 
-Cada comando tem sua própria lista de parâmetros específicas do comando. No exemplo abaixo, vemos o comando `ls` sem parâmetros, que lista os arquivos e pastas do diretório atual sem nenhuma formatação. Logo em seguida, é passado o parâmetro `-l` que instrui o comando a mostrar a lista detalhada.
+Cada comando tem sua própria lista de parâmetros, específicas do comando.
 
-Um comando para ler um arquivo naturalmente receberá como parâmetro qual arquivo ler. Um comando que . Comandos mais complexos precisam de mais parâmetros.
+:::tip[Dica]
+Antes de partirmos, uma dica importante e interessante: muitos comandos (nem todos) têm parâmetros opcionais e obrigatórios. Na ajuda do comando, os opcionais ficam **[entre colchetes]**. Já os obrigatórios ficam **&lt;entre maior-e-menor-que&gt; ou não ficam rodeados de nada**.
+
+No exemplo acima, vemos que **todos os parâmetros são opcionais exceto `target_name`**, que não está entre colchetes.
+
+Outra dica bacana de saber: muitos comandos mais modernos contam com o que são chamados de parâmetro resumido e parâmetros extensos. Vimos um breve exemplo disso com `-h` e `--help`: eles são a mesma coisa, mas um é resumido (apenas 1 hífen e apenas 1 letra) e o outro é a versão extensa (2 hífens e uma palavra). E **alguns desses parâmetros recebem valores!** Por exemplo:
+
+![Executando comando ls com o parâmetro --color](img/20-terminal-ls-color.gif "Executando comando ls com o parâmetro --color")
+:::
+
+## Resumo
+
+Nesta loooonga página, aprendemos a como dar comandos diretamente ao computador através de um Terminal:
+
+- **Pastas são a mesma coisa que Diretórios**: Precisamos saber navegar por elas para usar o Terminal adequadamente;
+- **Terminais:** Os sistemas operacionais contam com aplicações chamadas de Terminal para que possamos dar comandos diretamente ao Sistema Operacional e/ou a máquina;
+- **No terminal, escrevemos comandos e executamos eles apertando `Enter`:** A primeira palavra é qual comando será executado e as seguintes são os parâmetros;
+- **Muitos comandos contam com uma ajuda de como usá-los**: Essa ajuda pode ser acessada com um dos seguintes parâmetros: `-?`, `-h`, `--help` ou apenas no caso do Windows `/?`
