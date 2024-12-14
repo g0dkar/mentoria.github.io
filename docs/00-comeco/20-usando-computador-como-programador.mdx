@@ -277,9 +277,52 @@ Para dar comandos, basta digitar o nome do comando e pressionar enter. No vídeo
 
 ![Executando um comando ping](img/20-terminal-ping-vscode.gif "Terminal onde é digitado e executado o comando ping")
 
-Toda linha é composta de um **comando** - a primeira palavra - e seus **parâmetros**.
+Toda linha é composta de:
+
+- **O comando que será executado:** Sempre a primeira palavra da linha é o comando que será executado. Vale salientar que nenhum comando tem "espaço" no nome. Muitos usam `hifens-como-espacos` ou `sublinhados_como_espacos`;
+- **Seus parâmetros:** Tudo que vem na linha após o comando é enviado para o comando em si e compõem o que chamamos de parâmetros. São informações que o comando utiliza para funcionar ou mudar sua forma de funcionamento.
 
 No exemplo acima, temos: `ping google.com` como nossa linha. A primeira palavra é o comando: `ping`. O comando `ping` verifica se nosso computador consegue conversar com outro computador pela Internet. O parâmetro que o comando `ping` espera é **_qual_** computador vamos tentar nos comunicar.
+
+Muitos dos parâmetros que os comandos esperam alteram como eles funcionam. Esses parâmetros normalmente começam com 1 ou 2 `-` (hífen) ou **apenas no caso de comandos antigos do Windows**, uma `/` (barra).
+
+Praticamente todos os comandos contam com uma sessão de ajuda. Você pode acessar essa ajuda com o parâmetro `-h`, `--help` ou no caso de comandos mais antigos do Windows, com `/?`:
+
+```text
+PS C:\Users\rafael> ping /?
+
+Usage: ping [-t] [-a] [-n count] [-l size] [-f] [-i TTL] [-v TOS]
+            [-r count] [-s count] [[-j host-list] | [-k host-list]]
+            [-w timeout] [-R] [-S srcaddr] [-c compartment] [-p]
+            [-4] [-6] target_name
+
+Options:
+    -t             Ping the specified host until stopped.
+                   To see statistics and continue - type Control-Break;
+                   To stop - type Control-C.
+    -a             Resolve addresses to hostnames.
+    -n count       Number of echo requests to send.
+    -l size        Send buffer size.
+    -f             Set Don't Fragment flag in packet (IPv4-only).
+    -i TTL         Time To Live.
+    -v TOS         Type Of Service (IPv4-only. This setting has been deprecated
+                   and has no effect on the type of service field in the IP
+                   Header).
+    -r count       Record route for count hops (IPv4-only).
+    -s count       Timestamp for count hops (IPv4-only).
+    -j host-list   Loose source route along host-list (IPv4-only).
+    -k host-list   Strict source route along host-list (IPv4-only).
+    -w timeout     Timeout in milliseconds to wait for each reply.
+    -R             Use routing header to test reverse route also (IPv6-only).
+                   Per RFC 5095 the use of this routing header has been
+                   deprecated. Some systems may drop echo requests if
+                   this header is used.
+    -S srcaddr     Source address to use.
+    -c compartment Routing compartment identifier.
+    -p             Ping a Hyper-V Network Virtualization provider address.
+    -4             Force using IPv4.
+    -6             Force using IPv6.
+```
 
 Cada comando tem sua própria lista de parâmetros específicas do comando. No exemplo abaixo, vemos o comando `ls` sem parâmetros, que lista os arquivos e pastas do diretório atual sem nenhuma formatação. Logo em seguida, é passado o parâmetro `-l` que instrui o comando a mostrar a lista detalhada.
 
