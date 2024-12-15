@@ -1,9 +1,214 @@
 ---
 sidebar_position: 0
-title: 0 - Linguagens de Programação
-description: Vamos aprender o que são Linguagens de Programação
+title: 0 - Introdução
+description: Vamos falar de vários conceitos de Linguagens de Programação
 ---
 
-# Em criação
+# Introdução
 
-asd
+Neste capítulo, vamos começar a ver vários conceitos bem abstratos sobre linguagens de programação. Conhecer e entender muitos desses conceitos é o que diferencia os bons profissionais dos excelentes :wink:
+
+Se você tiver dificuldade com esses conceitos, não tem problema! Primeiro que você pode seguir seu ritmo, sem pressa e sem pressão. Segundo, que a parte mais importante desse capítulo é tornar você capaz de **_conversar_** com programadores e entender mais-ou-menos o que está sendo dito, vulgo "acompanhar a conversa".
+
+## 1. Qual o primeiro número?
+
+Talvez você já tenha notado que as sessões ao lado começam em `0` (zero).
+
+Isso vem de uma pergunta que normalmente não paramos para pensar na resposta: **Qual o "primeiro número"?**
+
+Olhando para o teclado de um computador, e pensando um pouco nos números que conhecemos, talvez a resposta seja óbvia: `1`. Entretanto, existe algum número que vem **antes** de `1` e ainda não é um número negativo? Sim! A resposta é: `0` (zero).
+
+Muitas linguagens de programação, **incluindo todas que vamos utilizar neste curso**, utilizam essa forma de contar: `0` é o "primeiro número", `1` o segundo, `2` o terceiro, etc. Essas linguagens tentam seguir uma forma mais "computadorizada" de ver os números: `0 + 1 = próximo número positivo`, `0 - 1 = próximo número negativo`, portanto `0` é realmente o "primeiro número", pois é a partir dele que conseguimos ir para os positivos e negativos.
+
+Algumas outras linguagens, em particular linguagens de programação voltadas para pesquisa científica como as linguagens [Julia](<https://pt.wikipedia.org/wiki/Julia_(linguagem_de_programa%C3%A7%C3%A3o)>) e [R](<https://pt.wikipedia.org/wiki/R_(linguagem_de_programa%C3%A7%C3%A3o)>), utilizam `1` como o "primeiro número". Dessa forma, elas ficam mais naturais de se trabalhar para cientistas que lidam bastante com matemática (Físicos, Químicos, Matemáticos, Astrônomos, Cientistas de Dados, etc.)
+
+Mas porque estamos escrevendo "primeiro número" entre aspas? Essa distinção entre "começar de `0`" ou "começar de `1`" é importante quando lidamos com **listas de coisas** na programação, e vamos lidar bastante com listas de coisas :sweat_smile:
+
+Se eu disser que preciso dos 3 primeiros itens de uma lista de coisas, quais números vou usar para recuperar esses itens? Nas linguagens que vamos conhecer, usaremos `0, 1 e 2`. Em Julia, por exemplo, usaríamos `1, 2 e 3`.
+
+## 2. Algoritmos
+
+Outra coisa muito importante na programação: boa parte de tudo que vamos criar são o que chamamos de [**Algoritmos**](https://pt.wikipedia.org/wiki/Algoritmo).
+
+**Algoritmos são uma sequencia de instruções que devem ser seguidas em ordem para se atingir um resultado.**
+
+Computadores são máquinas **burras**. Sim, apesar de toda aparente inteligência dos computadores, e a própria Inteligência Artificial moderna, computadores são máquinas burras. **Um computador jamais faz nada além do que foi pedido exatamente para ele:** veja [este vídeo](https://www.youtube.com/watch?v=pdhqwbUWf4U) para entender melhor o que queremos dizer com isso.
+
+:::info[Caso não consiga assitir o vídeo...]
+O vídeo mostra um pai e seus dois filhos ainda crianças (por volta de uns 8 a 10 anos de idade): uma menina, a mais velha, e um menino, o mais novo. É uma atividade prática e lúdica sobre como fazer algoritmos para computadores.
+
+O vídeo começa com o Pai dizendo: "Sabe, eu estou com fome. Vocês poderiam me ensinar a fazer um sanduíche de geléia e manteiga de amendoim?"
+
+Em seguida, é mostrada várias listas de instruções de como fazer o sanduíche, mas todas são incompletas. O Pai vai narrando cada instrução e fazendo a mesma em seguida:
+
+1. **Pegue 2 fatias de pão:** O Pai então pega as duas fatias e põe na mesa.
+2. **Pegue uma faca e a manteiga de amendoim:** O Pai então pega a faca e o pote de manteiga de amendoim.
+3. **Pegue uma fatia de pão e espalhe com a faca:** O Pai então pega a faca e faz um movimento circular em uma fatia do pão.\
+   O menino diz: "Espera! Você esqueceu a manteiga!" e o Pai responde: "Só estou fazendo exatamente o que que você mandou! _(lendo do papel com as instruções:)_ Pegue uma fatia de pão e espalhe com a faca!"
+4. O Pai continua. **Pegue a geléia e passe no pão:** O Pai pega o pote de geléia e passa o pote no pão.\
+   O menino diz: "Não pai! **Abra** a geléia!" e o pai responde: "Bom, aqui não diz para fazer isso!"
+5. **Junte os dois pães um em cima do outro:** Ele colca as fatias uma em cima da outra.
+6. **Dê uma grande mordida:** Ele morde os pães. O Pai olha para o filho, ambos rindo, e diz: "Isso definitivamente não tem gosto de um sanduíche de geléia e manteiga de amendoim."
+
+O vídeo segue no mesmo formato, mas com várias listas diferentes de instruções demonstrando como elas preciam ser **extrema e minuciosamente precisas**.
+
+No final, a última lista é bastante precisa e eles conseguem fazer o sanduíche :wink:
+:::
+
+O que faz os computadores serem tão incríveis, úteis e "inteligentes" são na verdade os algoritmos que nós, humanos, escrevemos.
+
+Esse texto que você está lendo nesse momento, por exemplo. Existem inúmeros algoritmos sendo executados que dizem exatamente como cada ponto de luz da tela do seu computador/celular tem que brilhar (uma tela moderna tem pelo menos 786mil pontos). Esse algoritmo, por sua vez, depende de outro algoritmo que interpreta o texto que está escrito e utiliza um arquivo de Fonte Tipográfica para saber como desenhar cada uma das letras.
+
+Já esse algoritmo precisa saber, por exemplo, qual o tamanho e cor de cada uma das letras deve ter. Essa informação é extraída a partir de um algoritmo do navegador que compreende o estilo visual da página que está sendo lida. Estilos esses que foram capturados por um algoritmo que recupera dados da Internet. O qual depende de outros algoritmos que fazem a comunicação de rede de computadores. E assim vai a imensa lista de algoritmos trabalhando em conjunto :smile:
+
+E mesmo parecendo mágica, tudo isso acontece a partir dos `0`s e `1`s que vimos anteriormente.
+
+## 3. Lógica _(de Programação)_
+
+Outro conceito importante é a famosa Lógica de Programação. Essa lógica funciona diferente da lógica humana, ou racional.
+
+Por exemplo: "se não tem núvens no céu então vai chover". Isso está certo ou errado?
+
+Para nós, humanos, isso está errado: não tem como chover sem núvens no céu! Entretanto, lembre que **computadores são máquinas burras!** Um computador não sabe de nada. Para um computador essa lógica está tão correta quanto qualquer outra.
+
+A forma que um computador interpretaria nossa afirmação é: "Olho para o céu e pergunto: vejo núvens? Se a resposta for 'não' então, segundo a lógica, vai chover."
+
+Essa forma bem literal de ver a lógica é chamada de [**Lógica Booleana** (ou booliana, em Portugal)](https://pt.wikipedia.org/wiki/%C3%81lgebra_booliana) _(pronunciada "bu-lê-ana")_: é a forma matemática de se interpretar e trabalhar com lógica.
+
+:::tip[Sempre o `0` e `1`]
+Lembre novamente dos `0`s e `1`s: esses 2 números são tudo que temos para trabalhar. A lógica booleana é bastante útil para computadores pois nela só existem dois valores: `falso` ou `verdadeiro`. Podemos interpretar também como "sim" _(verdadeiro)_ ou "não" _(falso)_.
+
+Para um computador, `0 = falso/não` e `1 = verdadeiro/sim` :wink:
+:::
+
+Essa forma de interpretar a lógica tenta transformar quaisquer frases lógicas em algo semelhante a uma equação:
+
+```text
+Nossa lógica: "se não tem núvens no céu então vai chover"
+
+Podemos dizer que:
+
+A = "não tem núvens no céu"
+B = "vai chover"
+
+Dessa forma, nossa lógica se torna: "se A então B"
+```
+
+Por enquanto, **tente pensar nessa lógica apenas da forma matemática.** No começo parece meio complicado, mas vai fazer bem mais sentido quando chegarmos nos exemplos :sweat_smile: - e você vai ver como é bem mais simples do que parece.
+
+Como dito anteriormente, temos apenas **2 _valores_** na lógica booleana: `verdadeiro (V)` e `falso (F)`.
+
+Além disso, temos **4 _operadores_ lógicos**. Um operador lógico recebe **1 ou 2 valores booleanos** e nos dá um "sim" ou "não" no final.
+
+Os operadores são `e` (em inglês: AND), `ou` (em inglês: OR), `ou exclusivo` (em inglês: XOR, sigla para e**X**clusive **OR**) e o operador de negação, chamado `NOT ou !`:
+
+:::warning[Importante]
+Daqui em diante, vamos usar `AND`, `OR`, `XOR` e `!` (um ponto de exclamação) para essas operações.
+:::
+
+### 3.1. Comparador E (AND)
+
+Nosso primeiro comparador é o `E`. Esse comparador compara 2 valores booleanos e diz se **os 2 valores são verdadeiros**. Veja a tabela abaixo:
+
+| A        | B        | A **_AND_** B?     | Comentário                                                       |
+| -------- | -------- | ------------------ | :--------------------------------------------------------------- |
+| `V` :+1: | `V` :+1: | `V and V = V` :+1: | Único caso que resulta em `V`: tanto A quanto B são 'verdadeiro' |
+| `V` :+1: | `F` :-1: | `V and F = F` :-1: | Falso pois B não é verdadeiro.                                   |
+| `F` :-1: | `V` :+1: | `F and V = F` :-1: | Falso pois A não é verdadeiro.                                   |
+| `F` :-1: | `F` :-1: | `F and F = F` :-1: | Falso pois nenhum dos dois é verdadeiro.                         |
+
+> _Dica/Macete: "Qualquer coisa AND falso é sempre falso"_
+
+### 3.2. Comparador OU (OR)
+
+Nosso segundo comparador é o `OU`. Esse comparador compara 2 valores booleanos e diz se **pelo menos 1 dos 2 valores é verdadeiro**. Veja a tabela abaixo:
+
+| A        | B        | A **_OR_** B?     | Comentário                                                   |
+| -------- | -------- | ----------------- | :----------------------------------------------------------- |
+| `V` :+1: | `V` :+1: | `V or V = V` :+1: | Verdade pois tanto A quanto B são verdadeiro.                |
+| `V` :+1: | `F` :-1: | `V or F = V` :+1: | Verdade pois A é verdadeiro.                                 |
+| `F` :-1: | `V` :+1: | `F or V = V` :+1: | Verdade pois B é verdadeiro.                                 |
+| `F` :-1: | `F` :-1: | `F or F = F` :-1: | Único caso que resulta em `F`: nenhum dos dois é verdadeiro. |
+
+> _Dica/Macete: "Qualquer coisa OR verdadeiro é sempre verdadeiro"_
+
+### 3.3. Comparador OU EXCLUSIVO (XOR)
+
+Nosso último comparador é o `OU EXCLUSIVO`, ou `XOR`. Esse comparador compara 2 valores booleanos e diz se **pelo menos 1 dos 2 valores é verdadeiro, _mas os 2 valores não podem ser iguais_!**.
+
+**Ele é raramente utilizado**, mas é bastante útil para algumas coisas que veremos no futuro. Veja a tabela abaixo:
+
+| A        | B        | A **_XOR_** B?     | Comentário                           |
+| -------- | -------- | ------------------ | :----------------------------------- |
+| `V` :+1: | `V` :+1: | `V xor V = F` :-1: | Falso pois `A` e `B` **são iguais**! |
+| `V` :+1: | `F` :-1: | `V xor F = V` :+1: | Verdade pois apenas A é verdadeiro.  |
+| `F` :-1: | `V` :+1: | `F xor V = V` :+1: | Verdade pois apenas B é verdadeiro.  |
+| `F` :-1: | `F` :-1: | `F xor F = F` :-1: | Falso pois `A` e `B` **são iguais**! |
+
+> _Dica/Macete: "Valor1 XOR Valor2 é verdadeiro se Valor1 é diferente de Valor2"_
+
+### 3.4. "Negação" booleana (NOT ou !)
+
+Este é um operador extra que simplesmente transforma um `V` :+1: em `F` :-1: e vice-versa. Lembre, novamente, só temos `0` e `1`: O que não é `0` é `1` e o que não é `1` é `0` :rofl:
+
+| A        | !A _(not A)_ | Comentário                     |
+| -------- | ------------ | :----------------------------- |
+| `V` :+1: | `F` :-1:     | Um "não-verdadeiro" é um falso |
+| `F` :-1: | `V` :+1:     | Um "não-falso" é um verdadeiro |
+
+> _Dica/Macete: Usamos o `!` para evitar a fadiga._
+>
+> <small>Se temos que `A = n > 5` (número maior que 5) mas queremos o contrário disso, ao invés de dizer que `B = n <= 5` (número menor ou igual a 5) podemos simplesmente dizer: `!A` (número NÃO é maior que 5)</small>
+
+### 3.5. Exemplos
+
+Agora, com ajuda das tabelas acima, vamos ver alguns exemplos de lógica como o computador vê :grin:
+
+Em todos os exemplos, vamos considerar que:
+
+- `A = n > 5` - Verdadeiro se um determinado número **for maior que 5**.
+- `B = n é par` - Verdadeiro se um determinado número **for par**.
+- `C = n < 10` - Verdadeiro se um determinado número **for menor que 10**.
+
+Só mais um lembrete: **o computador é burro**! Ele só sabe fazer matemática simples! Vamos lá:
+
+| Número (n) | Expressão | Resultado | Comentário                                |
+| ---------- | --------- | --------- | :---------------------------------------- |
+| `n = 5`    | `A`       | `V` :+1:  | `n` é _igual_ a 5, não _maior que_ 5 :+1: |
+| `n = 5`    | `B`       | `F` :-1:  | 5 é um número ímpar :-1:                  |
+| `n = 5`    | `C`       | `V` :+1:  | 5 é menor que 10 :+1:                     |
+
+Até aqui tudo certo! Todas essas são lógicas e computações que tanto nós quanto computadores conseguem fazer sem problemas. Agora, vamos usar também os **operadores booleanos**:
+
+| Número (n) | Expressão       | Resultado | Comentário                                                                                                 |
+| ---------- | --------------- | --------- | :--------------------------------------------------------------------------------------------------------- |
+| `n = 5`    | `A and B`       | `F` :-1:  | `A` é falso, `C` é verdadeiro. Vendo a tabela do `AND`: `F and V = F`                                      |
+| `n = 5`    | `B and C`       | `F` :-1:  | `B` é falso, `C` é verdadeiro. Vendo a tabela do `AND`: `F and V = F`                                      |
+| `n = 5`    | `A or C`        | `V` :+1:  | `A` é falso, `C` é verdadeiro. Vendo a tabela do `OR`: `F or V = V`                                        |
+| `n = 5`    | `A or B or C`   | `V` :+1:  | Usando o macete: `C` é verdadeiro e "qualquer coisa OR `V` = `V`", então o resultado é `V`                 |
+| `n = 5`    | `A and B and C` | `F` :-1:  | Usando o macete: os 3 precisam ser verdade. 5 é ímpar, então `B` é falso. "qualquer coisa AND falso" = `F` |
+| `n = 8`    | `A and B`       | `V` :+1:  | 8 é maior que 5 e é par                                                                                    |
+| `n = 9`    | `B or C`        | `V` :+1:  | 9 não é par (`B` é falso), mas é menor que 10 (`C` é verdadeiro)                                           |
+| `n = 4`    | `C and B`       | `V` :+1:  | 4 é menor que 10 e é par                                                                                   |
+| `n = 10`   | `C or B`        | `V` :+1:  | 10 não é menor que 10 (`C`), mas 10 é par                                                                  |
+| `n = 3`    | `A or B and C`  | `F` :-1:  | 3 não é maior que 5 (`A -> F`), não é ímpar (`B -> F`). `F` **_AND_** qualquer coisa = `F`                 |
+
+### 3.6. Matemática Booleana
+
+Não se preocupe, não vamos falar disso. Mas caso você tenha notado como a tabela do `OR` é o contrário da tabela do `AND`, talvez isso vá além de uma coincidência?
+
+Existe todo um campo da matemática chamado **_Álgebra_ Booleana**.
+
+Um curtíssimo resumo de Álgebra Booleana: `AND = multiplicação` e `OR = soma` e só existe `0` (qualquer coisa menor que `0` se torna `0`) e `1` (qualquer coisa maior que `1` se torna `1`).
+
+Por exemplo: `V or V = 1 + 1 = 1` :dizzy_face:
+
+Caso queira aprender mais, siga [este link](https://pt.wikipedia.org/wiki/%C3%81lgebra_booliana) ou [acesse esses slides](@site/static/aula5_algebra_booleana.pdf) <small>(originalmente disponíveis no link: https://www.inf.ufpr.br/kunzle/disciplinas/ci068/2019-2/slides/aula5_algebra_booleana.pdf - autor: [Prof. Dr. Marco Zanata](https://lattes.cnpq.br/7011183305034415) - Baixado dia 15/12/2024)</small>
+
+# Resumo
+
+Nesta página vimos alguns conceitos importantes:
+
+- **Muitas linguagens de programação usam `0` como o "primeiro número":** Quando temos listas de coisas, a primeira coisa estará na posição `0` (Zero).
+- **Algoritmos:** São sequencias de instruções que dizem a um computador como fazer algo. Necessitam ser completas, exatas e precisas!
+- **Lógica de Programação:** Baseada em 2 valores (verdadeiro e falso) e 4 operadores (`AND`, `OR`, `XOR` e `!`).
