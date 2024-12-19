@@ -64,8 +64,8 @@ Um efeito colateral bom do fato de computadores usarem números binários é que
 
 Para cada dígito binário, vamos transformar ele em `(n * 2^p)` onde:
 
--   `n` é o próprio número: Se for `1` então `n = 1`. Se for `0` então `n = 0`;
--   `p` é a **_posição_** do número **menos 1**: É o **3o** número? Então `p = 2`. **Importante:** as posições são contadas da direita para esquerda (do final para o começo)! Ou seja, em `100` a primeira posição (`p = 0`) é `0`, a segunda posição (`p = 1`) é `0` e a terceira posição (`p = 2`) é `1`!
+- `n` é o próprio número: Se for `1` então `n = 1`. Se for `0` então `n = 0`;
+- `p` é a **_posição_** do número **menos 1**: É o **3o** número? Então `p = 2`. **Importante:** as posições são contadas da direita para esquerda (do final para o começo)! Ou seja, em `100` a primeira posição (`p = 0`) é `0` _("último" número)_, a segunda posição (`p = 1`) é `0` _(número do meio)_ e a terceira posição (`p = 2`) é `1` _("primeiro" número)_!
 
 Com essas fórmulas para cada dígito basta **somar** tudo!
 
@@ -113,7 +113,7 @@ Você deve se perguntar: o que vem depois do 9 então? E a resposta é meio intu
 
 Dessa forma é possível saber se `10` é o número decimal `10` ou na verdade é o número **_hexa_**decimal `10`, que é o número decimal **16**!
 
-A partir desse ponto, nesse curso, eles ***sempre*** estarão prefixados com `0x` :eyes:
+A partir desse ponto, nesse curso, eles **_sempre_** estarão prefixados com `0x` :eyes:
 :::
 
 Isso significa que, em hexadecimal, `9 + 1 = 0xA`, `0xA + 1 = 0xB`, `0xB + 1 = 0xC`, ..., `0xF + 1 = 0x10`
@@ -148,6 +148,6 @@ Isso se dá porque raramente, muito raramente mesmo, precisamos utilizar a repre
 
 Nessa página, vimos sobre:
 
-* **Sistema decimal:** São os números que conhecemos e usamos no nosso dia-a-dia;
-* **Sistema binário:** São representações dos números decimais só que no sistema binário, que utiliza apenas `0` e `1`;
-* **Sistema hexadecimal:** Um sistema numérico que é bastante útil quando se precisa trabalhar com binários e converter em decimais. Composto de 16 números: `0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `A`, `B`, `C`, `D`, `E`, `F` e sempre representado com `0x` antes do número, por exemplo: `0xC0FFEE`.
+- **Sistema decimal:** São os números que conhecemos e usamos no nosso dia-a-dia;
+- **Sistema binário:** São representações dos números decimais só que no sistema binário, que utiliza apenas `0` e `1`;
+- **Sistema hexadecimal:** Um sistema numérico que é bastante útil quando se precisa trabalhar com binários e converter em decimais. Composto de 16 números: `0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `A`, `B`, `C`, `D`, `E`, `F` e sempre representado com `0x` antes do número, por exemplo: `0xC0FFEE`.

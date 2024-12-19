@@ -73,11 +73,13 @@ A seguir temos instruções de como acessar o Terminal nos Sistemas Operacionais
     Alternativamente, você pode abrir o Menu Iniciar (tecla Windows) e digitar `cmd` para encontrar o Prompt de Comando:
 
     ![Como encontrar o Prompt de Comando no Windows 11](img/20-windows-cmd.gif "Rápida animação mostrando a barra de busca do Menu Iniciar na qual é digitado c-m-d")
+
   </windows>
   <linux>
     Honestamente, a grande maioria dos usuários do Linux sabem o que é um Terminal, ou pelo menos onde acessar ele, pois várias atividades e configurações só podem ser feitas através do Terminal.
 
     Quase todas as "versões" diferentes (chamadas "distro") que tem interface visual têm um programa chamado **Terminal** (ou variações como `Konsole` ou `XTerm`) para dar acesso a ele. Se sua distro não tem interface visual... parabéns! Você já está no Terminal :smile:
+
   </linux>
   <mac>
     O Mac conta com um programa de Terminal, convenientemente chamado **Terminal** :smile: - a forma mais conveniente de abri-lo é usar o atalho Command+Espaço e digitar `Terminal`.
@@ -87,6 +89,7 @@ A seguir temos instruções de como acessar o Terminal nos Sistemas Operacionais
     ![Onde encontrar o Terminal no Mac](img/20-mac-terminal-app.png "Imagem mostrando onde encontrar o Terminal do Mac")
 
     *Imagem retirada de: https://appletoolbox.com/use-the-mac-terminal-the-basics/*
+
   </mac>
   <android>
     O Android, apesar de ser Linux por trás dos panos, não trás por padrão um Terminal. Porém existem vários apps que podem dar essa funcionalidade.
@@ -96,6 +99,7 @@ A seguir temos instruções de como acessar o Terminal nos Sistemas Operacionais
     ![Imagem mostrando o aplicativo Termux](img/20-android-termux.png "Imagem mostrando o aplicativo Termux")
 
     *Imagem retirada da Google Play Store (Loja de Aplicativos)*
+
   </android>
   <ios>
     O iOS, apesar der ser semelhante ao Linux por trás dos panos, não trás por padrão um Terminal. Porém existem vários apps que podem dar essa funcionalidade.
@@ -105,22 +109,23 @@ A seguir temos instruções de como acessar o Terminal nos Sistemas Operacionais
     ![Imagem mostrando o aplicativo a-Shell](img/20-ios-ashell.png "Imagem mostrando o aplicativo a-Shell")
 
     *Imagem retirada da Apple Store (Loja de Aplicativos)*
+
   </ios>
 </OSTabs>
 
---------------------
+---
 
 ### 1.3. Pastas/Diretórios e Arquivos
 
 Antes de partirmos para aprender os componentes que compõem uma linha de comando, vamos rever os conceitos de **Pastas/Diretórios** e **Arquivos**.
 
-Esses conceitos vêm da forma como escritórios costumavam organizar seus documentos: uma série de papéis (arquivos) ficam guardados em uma *pasta organizadora* ou gaveta.
+Esses conceitos vêm da forma como escritórios costumavam organizar seus documentos: uma série de papéis (arquivos) ficam guardados em uma _pasta organizadora_ ou gaveta.
 
 Essas ideias se mantém ainda hoje. **Arquivos** são onde nossas informações são guardadas: imagens, documentos, programas, etc.
 
 Todo Arquivo obrigatoriamente TEM QUE estar dentro de uma pasta/diretório. Opcionalmente, cada pasta/diretório pode estar dentro de outra pasta/diretório:
 
-A seguir, podemos ver uma ***navegação*** entre pastas/diretórios no Windows Explorer:
+A seguir, podemos ver uma **_navegação_** entre pastas/diretórios no Windows Explorer:
 
 ![Navegação entre pastas/diretórios no Windows Explorer](img/20-windows-pastas.gif "Navegação entre pastas no Windows Explorer")
 
@@ -154,7 +159,7 @@ O "onde" estamos é muito importante pois todo comando que é executado, é **ex
 
 Esse "onde" é chamado de **Diretório de Trabalho**, ou em inglês: **Working Directory**.
 
-É como o computador sabe quando pedimos para ele ler um arquivo ***onde*** ele pode encontrar o tal arquivo :wink:
+É como o computador sabe quando pedimos para ele ler um arquivo **_onde_** ele pode encontrar o tal arquivo :wink:
 :::
 
 A seguir temos explicações e descrições das linhas de comando mais comuns: estilo Windows e estilo Linux (se aplica a todos que não são o Windows).
@@ -176,6 +181,7 @@ A seguir temos explicações e descrições das linhas de comando mais comuns: e
     ![Terminal PowerShell com um comando ping sendo demonstrado](img/20-windows-shell2.png "Prompt de Comando do PowerShell com um comando ping sendo demonstrado")
 
     Ao pressionar Enter, o comando executado será o comando `ping`, e o resto da linha são os parâmetros do comando.
+
   </windows>
   <linux>
     No Linux ***e variantes*** (Mac, Android e iOS), o Terminal é bem mais avançado que no Windows.
@@ -191,6 +197,7 @@ A seguir temos explicações e descrições das linhas de comando mais comuns: e
     Se executarmos o comando `pwd` (do inglês **P**rint **W**orking **D**irectory, em português: Imprimir Diretório de Trabalho), comando para mostrar o diretório onde estamos, o diretório impresso é `/home/rafael`:\
     ![Execução do comando pwd no Terminal do Linux](img/20-linux-pwd.gif "Execução do comando pwd no Terminal do Linux")
     3. Por fim, temos o caractere que mostra que a partir daquele ponto é nosso texto: `$`. Vale salientar que no Linux e semelhantes, são usados 2 caracteres diferentes: `$` (cifrão) e `#` (cerquilha). O cifrão é usado quando o usuário atual NÃO tem permissões administrativas. Já a cerquilha é usada quando o usuário tem permissões administrativas.
+
   </linux>
 </OSTabs>
 
@@ -200,10 +207,14 @@ Os primeiros comandos que vamos aprender são os comandos utilizados para navega
 
 <OSTabs>
   <windows>
-    ![Animação mostrando navegação em pastas em um Terminal Windows PowerShell](img/20-windows-pastas-cli.gif "Animação mostrando a navegação da pasta raíz da unidade C: até a pasta vim90")
+    ![Animação mostrando navegação em pastas em um Terminal Windows
+    PowerShell](img/20-windows-pastas-cli.gif "Animação mostrando a navegação da
+    pasta raíz da unidade C: até a pasta vim90")
   </windows>
   <linux>
-    ![Animação mostrando navegação em pastas em um Terminal Linux](img/20-linux-pastas-cli.gif "Animação mostrando a navegação da pasta do usuário atual até a pasta vim90 em um Terminal Linux")
+    ![Animação mostrando navegação em pastas em um Terminal
+    Linux](img/20-linux-pastas-cli.gif "Animação mostrando a navegação da pasta
+    do usuário atual até a pasta vim90 em um Terminal Linux")
   </linux>
 </OSTabs>
 
@@ -213,27 +224,37 @@ O comando `cd` recebe apenas 1 parâmetro que o nome da pasta onde queremos nave
 
 Existem 2 pastas especiais chamadas `.` (ponto) e `..` ("ponto-ponto").
 
-A pasta chamada `.` representa a pasta que estamos nesse momento. Isso é útil se quisermos deixar claro que onde quer que estejamos navegando será *relativo* a onde estamos no momento. Esse tipo de navegação é chamada **Relativa** e é a forma padrão de navegar: quando você diz `cd proximo-diretorio` está subentendido que a pasta `proximo-diretorio` existe dentro da pasta que você está atualmente.
+A pasta chamada `.` representa a pasta que estamos nesse momento. Isso é útil se quisermos deixar claro que onde quer que estejamos navegando será _relativo_ a onde estamos no momento. Esse tipo de navegação é chamada **Relativa** e é a forma padrão de navegar: quando você diz `cd proximo-diretorio` está subentendido que a pasta `proximo-diretorio` existe dentro da pasta que você está atualmente.
 
 Já a pasta chamada `..` representa a pasta "acima" **da pasta que estamos atualmente**. Isso nos ajuda a "voltar" pastas que navegamos:
 
 <OSTabs>
   <windows>
-    ![Animação mostrando navegação em pastas em um Terminal Windows PowerShell](img/20-windows-pastas-cli2.gif "Animação mostrando a navegação da pasta vim90 de volta a pasta raíz da unidade C:")
+    ![Animação mostrando navegação em pastas em um Terminal Windows
+    PowerShell](img/20-windows-pastas-cli2.gif "Animação mostrando a navegação
+    da pasta vim90 de volta a pasta raíz da unidade C:")
   </windows>
   <linux>
-    ![Animação mostrando navegação em pastas em um Terminal Linux](img/20-linux-pastas-cli2.gif "Animação mostrando a navegação da pasta do usuário atual até a pasta vim90 em um Terminal Linux")
+    ![Animação mostrando navegação em pastas em um Terminal
+    Linux](img/20-linux-pastas-cli2.gif "Animação mostrando a navegação da pasta
+    do usuário atual até a pasta vim90 em um Terminal Linux")
   </linux>
 </OSTabs>
 
-Note que o `..` é sempre ***relativo*** a pasta que estamos no momento. Observe o seguinte exemplo:
+Note que o `..` é sempre **_relativo_** a pasta que estamos no momento. Observe o seguinte exemplo:
 
 <OSTabs>
   <windows>
-    ![Animação mostrando navegação em pastas em um Terminal Windows PowerShell](img/20-windows-pastas-cli3.gif "Animação mostrando navegação em pastas em um Terminal Windows PowerShell, em particular demonstrando que cd .. é sempre relativo a onde estamos")
+    ![Animação mostrando navegação em pastas em um Terminal Windows
+    PowerShell](img/20-windows-pastas-cli3.gif "Animação mostrando navegação em
+    pastas em um Terminal Windows PowerShell, em particular demonstrando que cd
+    .. é sempre relativo a onde estamos")
   </windows>
   <linux>
-    ![Animação mostrando navegação em pastas em um Terminal Linux](img/20-linux-pastas-cli3.gif "Animação mostrando a navegação da pasta do usuário atual até a pasta vim90 em um Terminal Linux, em particular demonstrando que cd .. é sempre relativo a onde estamos")
+    ![Animação mostrando navegação em pastas em um Terminal
+    Linux](img/20-linux-pastas-cli3.gif "Animação mostrando a navegação da pasta
+    do usuário atual até a pasta vim90 em um Terminal Linux, em particular
+    demonstrando que cd .. é sempre relativo a onde estamos")
   </linux>
 </OSTabs>
 
@@ -242,12 +263,12 @@ A navegação também pode ocorrer de forma "não relativa", ou seja, sem um pon
 
 No exemplo acima, o primeiro comando faz uma navegação absoluta. Ela instrui o Terminal a ir exatamente a pasta informada.
 
-A pasta informada não é relativa a nada, sabemos ***exatamente*** onde queremos ir.
+A pasta informada não é relativa a nada, sabemos **_exatamente_** onde queremos ir.
 
 Mas como o Terminal sabe disso? Se sua pasta começar com `/` (barra), ela será interpretada como absoluta. No caso do Windows, uma pasta que começa com uma Unidade de Disco (como `D:\software`) também é considerada como absoluta.
 :::
 
---------------------
+---
 
 O segundo comando para auxiliar a navegação se chama `ls` (ou **apenas no caso do Prompt de Comando** do Windows: `dir`).
 
@@ -257,10 +278,14 @@ Esse comando simplesmente mostra na tela uma lista das pastas e arquivos que exi
 
 <OSTabs>
   <windows>
-    ![Animação mostrando como listar as pastas e arquivos do diretório atual no Windows](img/20-windows-pastas-cli4.gif "Animação mostrando como listar as pastas e arquivos do diretório atual")
+    ![Animação mostrando como listar as pastas e arquivos do diretório atual no
+    Windows](img/20-windows-pastas-cli4.gif "Animação mostrando como listar as
+    pastas e arquivos do diretório atual")
   </windows>
   <linux>
-    ![Animação mostrando como listar as pastas e arquivos do diretório atual no Linux](img/20-linux-pastas-cli4.gif "Animação mostrando como listar as pastas e arquivos do diretório atual no Linux")
+    ![Animação mostrando como listar as pastas e arquivos do diretório atual no
+    Linux](img/20-linux-pastas-cli4.gif "Animação mostrando como listar as
+    pastas e arquivos do diretório atual no Linux")
   </linux>
 </OSTabs>
 
@@ -268,10 +293,14 @@ O comando `ls` pode ser executado sem nenhum parâmetro. Neste caso ele assume q
 
 <OSTabs>
   <windows>
-    ![Animação mostrando como listar diferentes pastas e arquivos no Windows](img/20-windows-pastas-cli5.gif "Animação mostrando como listar diferentes pastas e arquivos no Windows")
+    ![Animação mostrando como listar diferentes pastas e arquivos no
+    Windows](img/20-windows-pastas-cli5.gif "Animação mostrando como listar
+    diferentes pastas e arquivos no Windows")
   </windows>
   <linux>
-    ![Animação mostrando como listar diferentes pastas e arquivos no Linux](img/20-linux-pastas-cli5.gif "Animação mostrando como listar diferentes pastas e arquivos no Linux")
+    ![Animação mostrando como listar diferentes pastas e arquivos no
+    Linux](img/20-linux-pastas-cli5.gif "Animação mostrando como listar
+    diferentes pastas e arquivos no Linux")
   </linux>
 </OSTabs>
 
@@ -294,7 +323,7 @@ No exemplo acima, temos: `ping google.com` como nossa linha. A primeira palavra 
 
 Muitos dos parâmetros que os comandos esperam alteram como eles funcionam. Esses parâmetros normalmente começam com 1 ou 2 `-` (hífen) ou **apenas no caso de comandos antigos do Windows**, uma `/` (barra).
 
-Praticamente todos os comandos contam com uma sessão de ajuda. Você pode acessar essa ajuda com o parâmetro `-?`, `-h`, `--help` *(do inglês help: ajuda, em português)* ou no caso de comandos mais antigos do Windows, com `/?`:
+Praticamente todos os comandos contam com uma sessão de ajuda. Você pode acessar essa ajuda com o parâmetro `-?`, `-h`, `--help` _(do inglês help: ajuda, em português)_ ou no caso de comandos mais antigos do Windows, com `/?`:
 
 ```text
 PS C:\tools> ping /?
