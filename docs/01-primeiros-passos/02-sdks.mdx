@@ -30,7 +30,7 @@ Essas opções normalmente são chamadas de **Playgrounds**. Quer escrever um c�
   <java>
     Hoje em dia o Java tem um site oficial já pronto para você escrever código e executar ele: https://dev.java/playground/
   </java>
-  <javaScript>
+  <js>
     Como a casa do JavaScript é o navegador em si, existem inúmeras ferramentas para escrever e executar JavaScript.
 
     Experimente as seguintes opções e veja qual você acha melhor (lista feita em 2025):
@@ -40,13 +40,15 @@ Essas opções normalmente são chamadas de **Playgrounds**. Quer escrever um c�
     - PlayCode: https://playcode.io/javascript
     - JS Fiddle: https://jsfiddle.net/
     - Mozilla (criadora do navegador Firefox): https://developer.mozilla.org/en-US/play
-  </javaScript>
+
+  </js>
   <python>
     Python conta com várias ferramentas para escrever código no próprio navegador.
 
     Uma delas é a Polylang: https://polylang.io/#/python
 
     Este site tem ferramentas para se escrever código que funcionam totalmente no seu navegador, nada de código indo para lá e para cá via Internet.
+
   </python>
 </LangTabs>
 
@@ -59,8 +61,26 @@ Essas opções normalmente são chamadas de **Playgrounds**. Quer escrever um c�
     que o que precisaremos para o Java.
 
     Vamos instalar um conjunto de programas chamado **JDK - Java Development Kit**, em português: Kit para Desenvolvimento em Java.
+
+    <h3>Instalação</h3>
+
+    <OSTabs hidden>
+      <windows>
+        No Windows, a instalação do JDK do Java se dá como qualquer outro programa:
+
+        1. Escolha uma das opções de download disponíveis nesta página: https://learn.microsoft.com/pt-br/java/openjdk/download \
+           **Recomendamos a OpenJDK 11, 17 ou 21** - Para baixar o instalador da versão OpenJDK 21 diretamente, [clique aqui](https://aka.ms/download-jdk/microsoft-jdk-21-windows-x64.msi).
+        2. Depois, basta instalar como qualquer programa: Abra o arquivo baixado e siga as instruções do instalador.
+        3. **:warning: Importante :warning:**\
+           Durante a instalação, você verá uma tela semelhante a tela abaixo. Clique no botão da opção que fala sobre `JAVA_HOME` e selecione uma das duas primeiras opções _(em destaque na imagem: a opção sobre JAVA_HOME, o botão e o menu de opções que aparece ao clicar no botão)_:\
+           ![Habilitando a configuração do JAVA_HOME no instalador da OpenJDK](img/02-windows-java-home.png "Habilitando a configuração do JAVA_HOME no instalador da OpenJDK")
+        4. Execute o comando `java -version` para testar se instalou corretamente. Se a saída for semelhante a esta abaixo, pronto!\
+           ![Executando o comando java -version no PowerShell](img/02-windows-java-version.gif "Executando o comando java -version no PowerShell")
+      </windows>
+    </OSTabs>
+
   </kotlin>
   <java>Java xpto</java>
-  <javaScript>JS xpto</javaScript>
+  <js>JS xpto</js>
   <python>Python xpto</python>
 </LangTabs>

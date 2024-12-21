@@ -4,32 +4,26 @@ import TabItem from "@theme/TabItem";
 
 export default function OSTabs({
   children,
+  hidden,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) {
+  const showEmptyTabs = !hidden
   const childrenArray = Children.toArray(children)
   const WindowsInfo = childrenArray[0]
-  const LinuxInfo = childrenArray[1] || childrenArray[0]
-  const MacInfo = childrenArray[2] || LinuxInfo
-  const AndroidInfo = childrenArray[3] || LinuxInfo
-  const IOSInfo = childrenArray[4] || LinuxInfo
+  const LinuxInfo = childrenArray[1] || (showEmptyTabs ? childrenArray[0] : undefined)
+  const MacInfo = childrenArray[2] || (showEmptyTabs ? LinuxInfo : undefined)
+  const AndroidInfo = childrenArray[3] || (showEmptyTabs ? LinuxInfo : undefined)
+  const IOSInfo = childrenArray[4] || (showEmptyTabs ? LinuxInfo : undefined)
 
   return (
     <Tabs groupId="os" queryString>
       <TabItem value="windows" label="Windows" default>
         {WindowsInfo}
       </TabItem>
-      <TabItem value="linux" label="Linux">
-        {LinuxInfo}
-      </TabItem>
-      <TabItem value="mac" label="Mac">
-        {MacInfo}
-      </TabItem>
-      <TabItem value="android" label="Android">
-        {AndroidInfo}
-      </TabItem>
-      <TabItem value="ios" label="iOS">
-        {IOSInfo}
-      </TabItem>
+      {LinuxInfo && <TabItem value="linux" label="Linux">{LinuxInfo}</TabItem>}
+      {MacInfo && <TabItem value="mac" label="Mac">{MacInfo}</TabItem>}
+      {AndroidInfo && <TabItem value="android" label="Android">{AndroidInfo}</TabItem>}
+      {IOSInfo && <TabItem value="ios" label="iOS">{IOSInfo}</TabItem>}
     </Tabs>
   );
 }
