@@ -4,6 +4,8 @@ title: 2. Preparando para Programar
 description: Vamos aprender o que são Linguagens de Programação
 ---
 
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 import OSTabs from "@site/src/components/ostabs.tsx";
 import LangTabs from "@site/src/components/langtabs.tsx";
 
@@ -28,11 +30,11 @@ Existem algumas, como o IntelliJ IDEA por exemplo, que têm uma versão paga que
 
 Pense nisso como um valor extra para se ter vidros automáticos em um carro: Ter isso é cômodo? Com certeza. Ter isso é necessário para dirigir/usar o carro? Não :sweat_smile:
 
-----------
+---
 
 :warning: **Fique atento!** As ferramentas com versões pagas normalmente têm uma "Edição da Comunidade" ou "Versão Comunitária" que são suas versões gratuitas :wink:
 
-----------
+---
 
 Vamos falar mais sobre as razões das coisas serem assim no futuro. Não crescemos nos ombros de gigantes, mas sim nos ombros de inúmeras pessoas que trabalham árduamente para melhorar o mundo.
 :::
@@ -87,7 +89,7 @@ Infelizmente esse tipo de ferramentas e programas **NÃO** estão disponíveis p
 
     Vamos instalar um conjunto de programas chamado **JDK - Java Development Kit**, em português: Kit para Desenvolvimento em Java.
 
-    <h3>Instalação</h3>
+    <h3>a) Instalação</h3>
 
     <OSTabs hidden>
       <windows>
@@ -99,16 +101,75 @@ Infelizmente esse tipo de ferramentas e programas **NÃO** estão disponíveis p
         3. **:warning: Importante :warning:**\
            Durante a instalação, você verá uma tela semelhante a tela abaixo. Clique no botão da opção que fala sobre `JAVA_HOME` e selecione uma das duas primeiras opções _(abaixo está uma animação mostrando como fazer isso)_:\
            ![Habilitando a configuração do JAVA_HOME no instalador da OpenJDK](img/02-windows-java-home.gif "Habilitando a configuração do JAVA_HOME no instalador da OpenJDK")
-        4. Execute o comando `java -version` para testar se instalou corretamente. Se a saída for semelhante a esta abaixo, pronto!\
-           ![Executando o comando java -version no PowerShell](img/02-windows-java-version.gif "Executando o comando java -version no PowerShell")
       </windows>
+      <linux>
+        No Linux, a instalação de um JDK é dependente da distribuição do Linux que você utiliza.
+
+        Para facilitar, recomendamos o uso da ferramenta [**SDKMAN!**](https://sdkman.io/): este é um gerenciador de pacotes específicamente feito para se instalar, configurar e gerenciar JDKs e ferramentas adjacentes (como o Maven e Gradle).
+
+        Para instalar o SKDMAN! execute o seguinte:
+
+        ```text
+        $ curl -s "https://get.sdkman.io" | bash
+        ```
+
+        Após a instalação, você pode utilizar o SDKMAN! através do comando `sdk`. Para instalar a JDK estável mais atual (atualmente: versão 21), basta executar:
+
+        ```text
+        $ sdk install java
+        ```
+
+        Após a instalação, o SDKMAN! perguntará se você deseja utilizar essa JDK instalada como a padrão. Diga que Sim (digite `Y` e pressione enter):
+
+        ```text
+        Do you want java 21.0.5-tem to be set as default? (Y/n):
+        ```
+
+        Veja a seguir o processo de instalação _(idealmente sua instalação não terá esses erros que a minha teve, mas pode ignorá-los hahaha)_:
+
+        ![Instalação de uma JDK utilizando o SDKMAN!](img/02-linux-java-sdkman.gif "Instalação de uma JDK utilizando o SDKMAN!")
+      </linux>
+      <mac>
+        No Mac, a instalação de um JDK é bem simples através do uso da ferramenta [**SDKMAN!**](https://sdkman.io/): este é um gerenciador de pacotes específicamente feito para se instalar, configurar e gerenciar JDKs e ferramentas adjacentes (como o Maven e Gradle).
+
+        Para instalar o SKDMAN! execute o seguinte:
+
+        ```text
+        $ curl -s "https://get.sdkman.io" | bash
+        ```
+
+        Após a instalação, você pode utilizar o SDKMAN! através do comando `sdk`. Para instalar a JDK estável mais atual (atualmente: versão 21), basta executar:
+
+        ```text
+        $ sdk install java
+        ```
+
+        Após a instalação, o SDKMAN! perguntará se você deseja utilizar essa JDK instalada como a padrão. Diga que Sim (digite `Y` e pressione enter):
+
+        ```text
+        Do you want java 21.0.5-tem to be set as default? (Y/n):
+        ```
+
+        Veja a seguir o processo de instalação _(idealmente sua instalação não terá esses erros que a minha teve, mas pode ignorá-los hahaha)_:
+
+        ![Instalação de uma JDK utilizando o SDKMAN!](img/02-linux-java-sdkman.gif "Instalação de uma JDK utilizando o SDKMAN!")
+      </mac>
     </OSTabs>
 
+    <h3>b) Verificando se tudo instalou corretamente</h3>
+
+    Para testar se tudo foi instalado corretamente, execute os comandos `java -version` e `javac -version`. Se a saída for semelhante a esta abaixo, pronto!
+
+    <OSTabs hidden>
+      <windows>![Executando os comandos java -version e java -version no PowerShell](img/02-windows-java-version.gif "Executando os comandos java -version e java -version no PowerShell")</windows>
+      <linux>![Executando os comandos java -version e java -version no Linux](img/02-linux-java-version.gif "Executando os comandos java -version e java -version no Linux")</linux>
+      <mac>![Executando os comandos java -version e java -version no Linux](img/02-linux-java-version.gif "Executando os comandos java -version e java -version no Linux")</mac>
+    </OSTabs>
   </kotlin>
   <java>
     Vamos instalar um conjunto de programas chamado **JDK - Java Development Kit**, em português: Kit para Desenvolvimento em Java.
 
-    <h3>Instalação</h3>
+    <h3>a) Instalação</h3>
 
     <OSTabs hidden>
       <windows>
@@ -120,9 +181,69 @@ Infelizmente esse tipo de ferramentas e programas **NÃO** estão disponíveis p
         3. **:warning: Importante :warning:**\
            Durante a instalação, você verá uma tela semelhante a tela abaixo. Clique no botão da opção que fala sobre `JAVA_HOME` e selecione uma das duas primeiras opções _(abaixo está uma animação mostrando como fazer isso)_:\
            ![Habilitando a configuração do JAVA_HOME no instalador da OpenJDK](img/02-windows-java-home.gif "Habilitando a configuração do JAVA_HOME no instalador da OpenJDK")
-        4. Execute o comando `java -version` para testar se instalou corretamente. Se a saída for semelhante a esta abaixo, pronto!\
-           ![Executando o comando java -version no PowerShell](img/02-windows-java-version.gif "Executando o comando java -version no PowerShell")
       </windows>
+      <linux>
+        No Linux, a instalação de um JDK é dependente da distribuição do Linux que você utiliza.
+
+        Para facilitar, recomendamos o uso da ferramenta [**SDKMAN!**](https://sdkman.io/): este é um gerenciador de pacotes específicamente feito para se instalar, configurar e gerenciar JDKs e ferramentas adjacentes (como o Maven e Gradle).
+
+        Para instalar o SKDMAN! execute o seguinte:
+
+        ```text
+        $ curl -s "https://get.sdkman.io" | bash
+        ```
+
+        Após a instalação, você pode utilizar o SDKMAN! através do comando `sdk`. Para instalar a JDK estável mais atual (atualmente: versão 21), basta executar:
+
+        ```text
+        $ sdk install java
+        ```
+
+        Após a instalação, o SDKMAN! perguntará se você deseja utilizar essa JDK instalada como a padrão. Diga que Sim (digite `Y` e pressione enter):
+
+        ```text
+        Do you want java 21.0.5-tem to be set as default? (Y/n):
+        ```
+
+        Veja a seguir o processo de instalação _(idealmente sua instalação não terá esses erros que a minha teve, mas pode ignorá-los hahaha)_:
+
+        ![Instalação de uma JDK utilizando o SDKMAN!](img/02-linux-java-sdkman.gif "Instalação de uma JDK utilizando o SDKMAN!")
+      </linux>
+      <mac>
+        No Mac, a instalação de um JDK é bem simples através do uso da ferramenta [**SDKMAN!**](https://sdkman.io/): este é um gerenciador de pacotes específicamente feito para se instalar, configurar e gerenciar JDKs e ferramentas adjacentes (como o Maven e Gradle).
+
+        Para instalar o SKDMAN! execute o seguinte:
+
+        ```text
+        $ curl -s "https://get.sdkman.io" | bash
+        ```
+
+        Após a instalação, você pode utilizar o SDKMAN! através do comando `sdk`. Para instalar a JDK estável mais atual (atualmente: versão 21), basta executar:
+
+        ```text
+        $ sdk install java
+        ```
+
+        Após a instalação, o SDKMAN! perguntará se você deseja utilizar essa JDK instalada como a padrão. Diga que Sim (digite `Y` e pressione enter):
+
+        ```text
+        Do you want java 21.0.5-tem to be set as default? (Y/n):
+        ```
+
+        Veja a seguir o processo de instalação _(idealmente sua instalação não terá esses erros que a minha teve, mas pode ignorá-los hahaha)_:
+
+        ![Instalação de uma JDK utilizando o SDKMAN!](img/02-linux-java-sdkman.gif "Instalação de uma JDK utilizando o SDKMAN!")
+      </mac>
+    </OSTabs>
+
+    <h3>b) Verificando se tudo instalou corretamente</h3>
+
+    Para testar se tudo foi instalado corretamente, execute os comandos `java -version` e `javac -version`. Se a saída for semelhante a esta abaixo, pronto!
+
+    <OSTabs hidden>
+      <windows>![Executando os comandos java -version e java -version no PowerShell](img/02-windows-java-version.gif "Executando os comandos java -version e java -version no PowerShell")</windows>
+      <linux>![Executando os comandos java -version e java -version no Linux](img/02-linux-java-version.gif "Executando os comandos java -version e java -version no Linux")</linux>
+      <mac>![Executando os comandos java -version e java -version no Linux](img/02-linux-java-version.gif "Executando os comandos java -version e java -version no Linux")</mac>
     </OSTabs>
   </java>
   <js>JS xpto</js>
