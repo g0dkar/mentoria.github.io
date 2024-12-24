@@ -22,7 +22,7 @@ Escolher uma Aba muda **_todas_** as abas para aquela linguagem :wink:
 :::tip[De graça?]
 A comunidade de Programação e Desenvolvimento de Software, num geral, é uma comunidade bastante generosa.
 
-**As melhores ferramentas são todas gratuitas.** Sem pegadinhas.
+**As melhores ferramentas são todas gratuitas.** E quase sempre sem pegadinhas.
 
 Todas as ferramentas que serão sugeridas aqui são gratuitas e normalmente também são as melhores que o mercado oferece.
 
@@ -39,47 +39,12 @@ Pense nisso como um valor extra para se ter vidros automáticos em um carro: Ter
 Vamos falar mais sobre as razões das coisas serem assim no futuro. Não crescemos nos ombros de gigantes, mas sim nos ombros de inúmeras pessoas que trabalham árduamente para melhorar o mundo.
 :::
 
-## 1. Mas espera, e sem ser no Computador?
-
-Antes de continuarmos para as instruções de instalação em computadores (ou seja: Windows, Linux e MacOS) **existem alternativas caso você não queira ou não possa instalar nada no seu computador**. Essas são opções que não são tão confortáveis quanto as disponíveis diretamente no computador, mas nada nos impede de usá-las.
-
-Essas opções normalmente são chamadas de **Playgrounds**. Quer escrever um código e ver se ele funciona ou faz o que você quer? Só procurar um "java playground", por exemplo.
-
-<LangTabs>
-  <kotlin>
-    O Kotlin tem um site oficial já pronto para você escrever código e executar ele: https://play.kotlinlang.org
-  </kotlin>
-  <java>
-    Hoje em dia o Java tem um site oficial já pronto para você escrever código e executar ele: https://dev.java/playground/
-  </java>
-  <js>
-    Como a casa do JavaScript é o navegador em si, existem inúmeras ferramentas para escrever e executar JavaScript.
-
-    Experimente as seguintes opções e veja qual você acha melhor (lista feita em 2025):
-
-    - **JS Playground:** https://www.jsplayground.dev/ - Destes, é o meu favorito: apenas seu código e o resultado da execução do código.
-    - **RunJS:** https://runjs.app/play - Outra boa opção, simples e funciona
-    - PlayCode: https://playcode.io/javascript
-    - JS Fiddle: https://jsfiddle.net/
-    - Mozilla (criadora do navegador Firefox): https://developer.mozilla.org/en-US/play
-
-  </js>
-  <python>
-    Python conta com várias ferramentas para escrever código no próprio navegador.
-
-    Uma delas é a Polylang: https://polylang.io/#/python
-
-    Este site tem ferramentas para se escrever código que funcionam totalmente no seu navegador, nada de código indo para lá e para cá via Internet.
-
-  </python>
-</LangTabs>
-
-## 2. Configurando seu Computador
+## 1. Configurando seu Computador
 
 A seguir estão instruções para termos o mínimo necessário para que possamos escrever e executar nossos programas em nosso próprio computador.
 
 :::warning[Só computadores]
-Infelizmente esse tipo de ferramentas e programas **NÃO** estão disponíveis para Celulares. Se você estiver em um, experimente usar as alternativas compartilhadas acima.
+Infelizmente esse tipo de ferramentas e programas **NÃO** estão disponíveis para Celulares. Se você estiver em um, experimente usar as alternativas compartilhadas na próxima seção.
 :::
 
 <LangTabs>
@@ -110,22 +75,22 @@ Infelizmente esse tipo de ferramentas e programas **NÃO** estão disponíveis p
         Para instalar o SKDMAN! execute o seguinte:
 
         ```text
-        $ curl -s "https://get.sdkman.io" | bash
+        curl -s "https://get.sdkman.io" | bash
         ```
 
         Após a instalação, você pode utilizar o SDKMAN! através do comando `sdk`. Para instalar a JDK estável mais atual (atualmente: versão 21), basta executar:
 
         ```text
-        $ sdk install java
+        sdk install java
         ```
 
-        Após a instalação, o SDKMAN! perguntará se você deseja utilizar essa JDK instalada como a padrão. Diga que Sim (digite `Y` e pressione enter):
+        Após a instalação, o SDKMAN! perguntará se você deseja utilizar essa JDK instalada (no exemplo abaixo é a `21.0.5-tem`) como a padrão. Diga que Sim (digite `Y` e pressione enter):
 
         ```text
         Do you want java 21.0.5-tem to be set as default? (Y/n):
         ```
 
-        Veja a seguir o processo de instalação _(idealmente sua instalação não terá esses erros que a minha teve, mas pode ignorá-los hahaha)_:
+        Veja a seguir o processo de instalação _(idealmente sua instalação não terá esses erros que a minha teve, mas pode ignorá-los)_:
 
         ![Instalação de uma JDK utilizando o SDKMAN!](img/02-linux-java-sdkman.gif "Instalação de uma JDK utilizando o SDKMAN!")
       </linux>
@@ -135,22 +100,22 @@ Infelizmente esse tipo de ferramentas e programas **NÃO** estão disponíveis p
         Para instalar o SKDMAN! execute o seguinte:
 
         ```text
-        $ curl -s "https://get.sdkman.io" | bash
+        curl -s "https://get.sdkman.io" | bash
         ```
 
         Após a instalação, você pode utilizar o SDKMAN! através do comando `sdk`. Para instalar a JDK estável mais atual (atualmente: versão 21), basta executar:
 
         ```text
-        $ sdk install java
+        sdk install java
         ```
 
-        Após a instalação, o SDKMAN! perguntará se você deseja utilizar essa JDK instalada como a padrão. Diga que Sim (digite `Y` e pressione enter):
+        Após a instalação, o SDKMAN! perguntará se você deseja utilizar essa JDK instalada (no exemplo abaixo é a `21.0.5-tem`) como a padrão. Diga que Sim (digite `Y` e pressione enter):
 
         ```text
         Do you want java 21.0.5-tem to be set as default? (Y/n):
         ```
 
-        Veja a seguir o processo de instalação _(idealmente sua instalação não terá esses erros que a minha teve, mas pode ignorá-los hahaha)_:
+        Veja a seguir o processo de instalação _(idealmente sua instalação não terá esses erros que a minha teve, mas pode ignorá-los)_:
 
         ![Instalação de uma JDK utilizando o SDKMAN!](img/02-linux-java-sdkman.gif "Instalação de uma JDK utilizando o SDKMAN!")
       </mac>
@@ -161,9 +126,9 @@ Infelizmente esse tipo de ferramentas e programas **NÃO** estão disponíveis p
     Para testar se tudo foi instalado corretamente, execute os comandos `java -version` e `javac -version`. Se a saída for semelhante a esta abaixo, pronto!
 
     <OSTabs hidden>
-      <windows>![Executando os comandos java -version e java -version no PowerShell](img/02-windows-java-version.gif "Executando os comandos java -version e java -version no PowerShell")</windows>
-      <linux>![Executando os comandos java -version e java -version no Linux](img/02-linux-java-version.gif "Executando os comandos java -version e java -version no Linux")</linux>
-      <mac>![Executando os comandos java -version e java -version no Linux](img/02-linux-java-version.gif "Executando os comandos java -version e java -version no Linux")</mac>
+      <windows>![Executando os comandos java -version e javac -version no PowerShell](img/02-windows-java-version.gif "Executando os comandos java -version e javac -version no PowerShell")</windows>
+      <linux>![Executando os comandos java -version e javac -version no Linux](img/02-linux-java-version.gif "Executando os comandos java -version e javac -version no Linux")</linux>
+      <mac>![Executando os comandos java -version e javac -version no Linux](img/02-linux-java-version.gif "Executando os comandos java -version e javac -version no Linux")</mac>
     </OSTabs>
   </kotlin>
   <java>
@@ -190,22 +155,22 @@ Infelizmente esse tipo de ferramentas e programas **NÃO** estão disponíveis p
         Para instalar o SKDMAN! execute o seguinte:
 
         ```text
-        $ curl -s "https://get.sdkman.io" | bash
+        curl -s "https://get.sdkman.io" | bash
         ```
 
         Após a instalação, você pode utilizar o SDKMAN! através do comando `sdk`. Para instalar a JDK estável mais atual (atualmente: versão 21), basta executar:
 
         ```text
-        $ sdk install java
+        sdk install java
         ```
 
-        Após a instalação, o SDKMAN! perguntará se você deseja utilizar essa JDK instalada como a padrão. Diga que Sim (digite `Y` e pressione enter):
+        Após a instalação, o SDKMAN! perguntará se você deseja utilizar essa JDK instalada (no exemplo abaixo é a `21.0.5-tem`) como a padrão. Diga que Sim (digite `Y` e pressione enter):
 
         ```text
         Do you want java 21.0.5-tem to be set as default? (Y/n):
         ```
 
-        Veja a seguir o processo de instalação _(idealmente sua instalação não terá esses erros que a minha teve, mas pode ignorá-los hahaha)_:
+        Veja a seguir o processo de instalação _(idealmente sua instalação não terá esses erros que a minha teve, mas pode ignorá-los)_:
 
         ![Instalação de uma JDK utilizando o SDKMAN!](img/02-linux-java-sdkman.gif "Instalação de uma JDK utilizando o SDKMAN!")
       </linux>
@@ -215,22 +180,22 @@ Infelizmente esse tipo de ferramentas e programas **NÃO** estão disponíveis p
         Para instalar o SKDMAN! execute o seguinte:
 
         ```text
-        $ curl -s "https://get.sdkman.io" | bash
+        curl -s "https://get.sdkman.io" | bash
         ```
 
         Após a instalação, você pode utilizar o SDKMAN! através do comando `sdk`. Para instalar a JDK estável mais atual (atualmente: versão 21), basta executar:
 
         ```text
-        $ sdk install java
+        sdk install java
         ```
 
-        Após a instalação, o SDKMAN! perguntará se você deseja utilizar essa JDK instalada como a padrão. Diga que Sim (digite `Y` e pressione enter):
+        Após a instalação, o SDKMAN! perguntará se você deseja utilizar essa JDK instalada (no exemplo abaixo é a `21.0.5-tem`) como a padrão. Diga que Sim (digite `Y` e pressione enter):
 
         ```text
         Do you want java 21.0.5-tem to be set as default? (Y/n):
         ```
 
-        Veja a seguir o processo de instalação _(idealmente sua instalação não terá esses erros que a minha teve, mas pode ignorá-los hahaha)_:
+        Veja a seguir o processo de instalação _(idealmente sua instalação não terá esses erros que a minha teve, mas pode ignorá-los)_:
 
         ![Instalação de uma JDK utilizando o SDKMAN!](img/02-linux-java-sdkman.gif "Instalação de uma JDK utilizando o SDKMAN!")
       </mac>
@@ -241,11 +206,129 @@ Infelizmente esse tipo de ferramentas e programas **NÃO** estão disponíveis p
     Para testar se tudo foi instalado corretamente, execute os comandos `java -version` e `javac -version`. Se a saída for semelhante a esta abaixo, pronto!
 
     <OSTabs hidden>
-      <windows>![Executando os comandos java -version e java -version no PowerShell](img/02-windows-java-version.gif "Executando os comandos java -version e java -version no PowerShell")</windows>
-      <linux>![Executando os comandos java -version e java -version no Linux](img/02-linux-java-version.gif "Executando os comandos java -version e java -version no Linux")</linux>
-      <mac>![Executando os comandos java -version e java -version no Linux](img/02-linux-java-version.gif "Executando os comandos java -version e java -version no Linux")</mac>
+      <windows>![Executando os comandos java -version e javac -version no PowerShell](img/02-windows-java-version.gif "Executando os comandos java -version e javac -version no PowerShell")</windows>
+      <linux>![Executando os comandos java -version e javac -version no Linux](img/02-linux-java-version.gif "Executando os comandos java -version e javac -version no Linux")</linux>
+      <mac>![Executando os comandos java -version e javac -version no Linux](img/02-linux-java-version.gif "Executando os comandos java -version e javac -version no Linux")</mac>
     </OSTabs>
   </java>
-  <js>JS xpto</js>
-  <python>Python xpto</python>
+  <js>
+    Para o JavaScript, não é necessário instalar nada **se você executar seu código no seu navegador**. Ainda assim, recomendamos instalar o [**Node.js**](https://nodejs.org) (pronunciado "nôde-jóta-ésse").
+
+    O Node.js é uma ferramenta que nos permite executar JavaScript **sem um navegador**, de forma autônoma como qualquer outra linguagem de programação. Além disso, ele conta com uma extensa biblioteca de ferramentas que podemos utilizar: a [**NPM**](https://www.npmjs.com), sigla para **N**ode **P**ackage **M**anager ou em português: Gerenciador de Pacotes do Node.
+
+    <h3>a) Instalação</h3>
+
+    <OSTabs hidden>
+      <windows>
+        No Windows, a instalação do Node.js se dá como qualquer outro programa:
+
+        1. Na [página de download](https://nodejs.org/pt/download/prebuilt-installer) do Node.js, escolha a aba **Instalador do Pré-Compilado** e clique no botão.
+        2. Depois, basta instalar como qualquer programa: Abra o arquivo baixado e siga as instruções do instalador.
+      </windows>
+      <linux>
+        No Linux, é recomendado que o Node.js seja instalado através de um gerenciador de pacotes.
+
+        1. Na [página de download](https://nodejs.org/pt/download/package-manager) do Node.js, escolha a aba **Gestor de Pacote**
+        2. Selecione na parte logo abaixo das abas qual gerenciador de pacotes você quer utilizar (recomendado: `nvm`)
+        3. Basta seguir os comandos que estarão logo em seguida.
+      </linux>
+      <mac>
+        No Mac, é recomendado que o Node.js seja instalado através de um gerenciador de pacotes.
+
+        1. Na [página de download](https://nodejs.org/pt/download/package-manager) do Node.js, escolha a aba **Gestor de Pacote**
+        2. Selecione na parte logo abaixo das abas qual gerenciador de pacotes você quer utilizar (recomendado: `nvm`)
+        3. Basta seguir os comandos que estarão logo em seguida.
+      </mac>
+    </OSTabs>
+
+    <h3>b) Verificando se tudo instalou corretamente</h3>
+
+    Para testar se tudo foi instalado corretamente, execute os comandos `node -v` e `npm -v` (atenção: uma das opções de instalação é o n**V**m e este é o n**P**m :wink:). Se a saída for semelhante a esta abaixo, pronto!
+
+    <OSTabs hidden>
+      <windows>![Executando os comandos node -v e npm -v no PowerShell](img/02-windows-js-version.gif "Executando os comandos node -v e npm -v no PowerShell")</windows>
+      <linux>![Executando os comandos node -v e npm -v no Linux](img/02-linux-js-version.gif "Executando os comandos node -v e npm -v no Linux")</linux>
+      <mac>![Executando os comandos node -v e npm -v no Linux](img/02-linux-js-version.gif "Executando os comandos node -v e npm -v no Linux")</mac>
+    </OSTabs>
+  </js>
+  <python>
+    Tudo que precisamos para programar em Python é o que ironicamente se chama simplesmente de [**Python**](https://www.python.org/downloads/). Veremos a seguir como instalar ele.
+
+    :::info[Python e suas versões]
+    Python tem um "probleminha" com suas versões. Existem diferenças importantes entre o Python 2 e 3, por exemplo, e certas coisas funcionam em uma mas não na outra. Como estamos **aprendendo a programar**, essas diferenças não serão tão impactantes para nós.
+
+    Entretanto, vale salientar: vamos considerar que você está usando a versão mais nova do Python no momento, que é a `3.13` (vulgo "Python 3").
+    :::
+
+    <h3>a) Instalação</h3>
+
+    <OSTabs hidden>
+      <windows>
+        No Windows, a instalação do Python se dá como qualquer outro programa:
+
+        1. Na [página de download](https://www.python.org/downloads/) do Python, clique no botão **Download Python** na área azul (parte superior do site, botão amarelo).
+        2. Depois, basta instalar como qualquer programa: Abra o arquivo baixado e siga as instruções do instalador.\
+           **:warning: Importante :warning: Durante a instalação, selecione a opção "Adicionar Python ao PATH". Isso fará com que o Python possa ser acessado pela linha de comando:**\
+           
+      </windows>
+      <linux>
+        No Linux, é recomendado que o Python seja instalado através de um gerenciador de pacotes.
+
+        1. Na [página de download](https://nodejs.org/pt/download/package-manager) do Node.js, escolha a aba **Gestor de Pacote**
+        2. Selecione na parte logo abaixo das abas qual gerenciador de pacotes você quer utilizar (recomendado: `nvm`)
+        3. Basta seguir os comandos que estarão logo em seguida.
+      </linux>
+      <mac>
+        No Mac, é recomendado que o Node.js seja instalado através de um gerenciador de pacotes.
+
+        1. Na [página de download](https://nodejs.org/pt/download/package-manager) do Node.js, escolha a aba **Gestor de Pacote**
+        2. Selecione na parte logo abaixo das abas qual gerenciador de pacotes você quer utilizar (recomendado: `nvm`)
+        3. Basta seguir os comandos que estarão logo em seguida.
+      </mac>
+    </OSTabs>
+
+    <h3>b) Verificando se tudo instalou corretamente</h3>
+
+    Para testar se tudo foi instalado corretamente, execute os comandos `node -v` e `npm -v` (atenção: uma das opções de instalação é o n**V**m e este é o n**P**m :wink:). Se a saída for semelhante a esta abaixo, pronto!
+
+    <OSTabs hidden>
+      <windows>![Executando os comandos node -v e npm -v no PowerShell](img/02-windows-js-version.gif "Executando os comandos node -v e npm -v no PowerShell")</windows>
+      <linux>![Executando os comandos node -v e npm -v no Linux](img/02-linux-python-version.gif "Executando o comando python3 --version no Linux")</linux>
+      <mac>![Executando os comandos node -v e npm -v no Linux](img/02-linux-js-version.gif "Executando os comandos node -v e npm -v no Linux")</mac>
+    </OSTabs>
+  </python>
+</LangTabs>
+
+## 2. Mas espera, e sem ser no Computador?
+
+Antes de continuarmos para as instruções de instalação em computadores (ou seja: Windows, Linux e MacOS) **existem alternativas caso você não queira ou não possa instalar nada no seu computador**. Essas são opções que não são tão confortáveis quanto as disponíveis diretamente no computador, mas nada nos impede de usá-las.
+
+Essas opções normalmente são chamadas de **Playgrounds**. Quer escrever um código e ver se ele funciona ou faz o que você quer? Só procurar um "java playground", por exemplo.
+
+<LangTabs>
+  <kotlin>
+    O Kotlin tem um site oficial já pronto para você escrever código e executar ele: https://play.kotlinlang.org
+  </kotlin>
+  <java>
+    Hoje em dia o Java tem um site oficial já pronto para você escrever código e executar ele: https://dev.java/playground/
+  </java>
+  <js>
+    Como a casa do JavaScript é o navegador em si, existem inúmeras ferramentas para escrever e executar JavaScript.
+
+    Experimente as seguintes opções e veja qual você acha melhor (lista feita em 2025):
+
+    - **JS Playground:** https://www.jsplayground.dev/ - Destes, é o meu favorito: apenas seu código e o resultado da execução do código.
+    - **RunJS:** https://runjs.app/play - Outra boa opção, simples e funciona
+    - PlayCode: https://playcode.io/javascript
+    - JS Fiddle: https://jsfiddle.net/
+    - Mozilla (criadora do navegador Firefox): https://developer.mozilla.org/en-US/play
+  </js>
+  <python>
+    Python conta com várias ferramentas para escrever código no próprio navegador.
+
+    Uma delas é a Polylang: https://polylang.io/#/python
+
+    Este site tem ferramentas para se escrever código que funcionam totalmente no seu navegador, nada de código indo para lá e para cá via Internet.
+
+  </python>
 </LangTabs>
