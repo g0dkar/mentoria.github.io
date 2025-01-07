@@ -19,7 +19,7 @@ Bom, como programadores nossa função é controlar a máquina para fazer com qu
 No geral, vamos utilizar bastante 1 ferramenta: a [**linha de comando**](https://pt.wikipedia.org/wiki/Interface_de_linha_de_comandos "Página da Wikipedia sobre Interfaces de Linha de Comando").
 
 :::warning[ATENÇÃO!]
-Muita coisa nas outras partes da mentoria será feita via linha de comando, e vão assumir que você sabe utilizar mesmo que de forma bem básica a linha de comando.
+Muitas coisas nas outras partes da mentoria serão feita via linha de comando, e vão assumir que você sabe utilizar mesmo que de forma bem básica a linha de comando.
 
 **Esta página ensina você o básico para se executar comandos.** Isso é importante para, num capítulo futuro, você não ficar perdido(a) quando ler algo como "E por fim, basta executar `npm run start`" :wink:
 :::
@@ -40,7 +40,7 @@ Apesar de ser o nome da ferramenta, na maior parte do tempo ela é chamada de **
 - [**Terminal**](https://pt.wikipedia.org/wiki/Terminal_%28inform%C3%A1tica%29 "Página da Wikipedia sobre Terminal (computação)") é o nome do programa que o Sistema Operacional dá para que tenhamos acesso à Linha de Comando e, por isso, normalmente chamamos a "linha de comando" simplesmente de Terminal. A muuuuuuito tempo atrás, no tempo que computadores tomavam um andar inteiro de um prédio, "Terminal" era o nome do conjunto de Monitor + Teclado onde você podia ligá-lo a um desses computadores e dar comandos diretamente a ele. Semelhante a um controle de vídeo-game: qualquer controle de, por exemplo, Playstation 5 funciona em qualquer outro Playstation 5.
 - **CLI** é a sigla do termo em inglês **C**ommand **L**ine **I**nterface - em português: Interface de Linha de Comando. É útil saber disso para buscar informações e ajuda: tente procurar "quantidade de espaço livre **_cli_**" (sem aspas) no Google (ou clique [aqui](https://www.google.com/search?q=quantidade+de+espaço+livre+cli)) e veja :smile:
 - [**Shell**](https://pt.wikipedia.org/wiki/Shell_%28computa%C3%A7%C3%A3o%29), assim como Terminal, vem do nome de um programa que nos dá acesso à linha de comando. No Linux e Mac, há programas como [**BASH**](https://pt.wikipedia.org/wiki/Bash) (**B**ourne **A**gain **Sh**ell), [**ZSH**](https://pt.wikipedia.org/wiki/Z_shell) (simplesmente "**Z**-**Sh**ell" mesmo) e outros. O importante é que eles são Shells _(em português: concha)_: apenas uma casca entre você e a máquina.
-  :::
+:::
 
 Agora que sabemos que existe e mais-ou-menos o que é a linha de comando, vamos aprender como usá-la a seguir. Colocamos instruções nos 3 Sistemas Operacionais mais comuns em computadores e alternativas para Android e iOS.
 
@@ -81,12 +81,11 @@ A seguir temos instruções de como acessar o Terminal nos Sistemas Operacionais
   <mac>
     O Mac conta com um programa de Terminal, convenientemente chamado **Terminal** :smile: - a forma mais conveniente de abri-lo é usar o atalho Command+Espaço e digitar `Terminal`.
 
-    Caso queira um programa com mais configurações e opções, recomendo instalar um o [iTerm2](https://iterm2.com/).
+    Caso queira um programa com mais configurações e opções, recomendo instalar o [iTerm2](https://iterm2.com/).
+
+    Para abrir o Terminal padrão que vem com o Sistema Operacional, você o encontra em Finder > Aplicativos > Utilidades:
 
     ![Onde encontrar o Terminal no Mac](img/20-mac-terminal-app.png "Imagem mostrando onde encontrar o Terminal do Mac")
-
-    *Imagem retirada de: https://appletoolbox.com/use-the-mac-terminal-the-basics/*
-
   </mac>
   <android>
     O Android, apesar de ser Linux por trás dos panos, não trás por padrão um Terminal. Porém existem vários apps que podem dar essa funcionalidade.
@@ -151,12 +150,20 @@ Todas as linhas de comando vão ter pelo menos 2 elementos principais:
 - **"Onde" você está:** Pense em quantas coisas você faz em um computador envolvem arquivos. Como no Terminal vamos mandar comandos diretamente ao computador, não temos a facilidade de ter uma informação mais visual de que arquivos queremos ler ou salvar. Por esta razão, a linha de comando sempre se vincula a alguma pasta do seu computador. O "onde" é justamente isso: **dentro de qual pasta estamos no momento?**
 - **A partir de que ponto você pode escrever:** Como tudo é texto, precisamos saber onde que começa o nosso texto e o texto do próprio terminal :smile: - Geralmente é um dos seguintes caracteres: `>`, `$` ou `#`
 
-:::warning[Importante]
+:::tip[Importante]
 O "onde" estamos é muito importante pois todo comando que é executado, é **executado relativo a onde estamos**!
 
 Esse "onde" é chamado de **Diretório de Trabalho**, ou em inglês: **Working Directory**.
 
 É como o computador sabe quando pedimos para ele ler um arquivo **_onde_** ele pode encontrar o tal arquivo :wink:
+:::
+
+:::warning[Porque os exemplos estão iguais?]
+Hoje em dia, as linhas de comando modernas se dividem apenas em "Windows" e "o Resto".
+
+**O único Sistema Operacional que não tem uma linha de comando que funciona igual a do Linux é o Microsoft Windows.**
+
+Por esta razão, boa parte dos exemplos do Linux, Mac, Android e iOS poderão ser iguais. Não tem diferenças entre eles :smile:
 :::
 
 A seguir temos explicações e descrições das linhas de comando mais comuns: estilo Windows e estilo Linux (se aplica a todos que não são o Windows).
