@@ -268,33 +268,45 @@ Infelizmente esse tipo de ferramentas e programas **NÃO** estão disponíveis p
 
         1. Na [página de download](https://www.python.org/downloads/) do Python, clique no botão **Download Python** na área azul (parte superior do site, botão amarelo).
         2. Depois, basta instalar como qualquer programa: Abra o arquivo baixado e siga as instruções do instalador.\
-           **:warning: Importante :warning: Durante a instalação, selecione a opção "Adicionar Python ao PATH". Isso fará com que o Python possa ser acessado pela linha de comando:**\
-           
+           **:warning: Importante :warning: Durante a instalação, selecione a opção "Adicionar python.exe ao PATH". Isso fará com que o Python possa ser acessado pela linha de comando.**\
+           Outra recomendação é instalar o Python para todos os usuários, como demonstrado abaixo:\
+          ![Instalando o Python3 no Windows](img/02-windows-python-install.gif "Instalando o Python3 no Windows")
       </windows>
       <linux>
-        No Linux, é recomendado que o Python seja instalado através de um gerenciador de pacotes.
+        No Linux, é recomendado que o Python seja instalado através de um gerenciador de pacotes. Tanto no Ubuntu (Debian) quanto no Fedora/CentOS (RHEL) o pacote do Python se chama `python3`:
 
-        1. Na [página de download](https://nodejs.org/pt/download/package-manager) do Node.js, escolha a aba **Gestor de Pacote**
-        2. Selecione na parte logo abaixo das abas qual gerenciador de pacotes você quer utilizar (recomendado: `nvm`)
-        3. Basta seguir os comandos que estarão logo em seguida.
+        <Tabs groupId="distro" queryString>
+          <TabItem value="debian" label="Ubuntu / Debian" default>
+            ```
+            sudo apt update && sudo apt install python3
+            ```
+          </TabItem>
+          <TabItem value="rhel" label="Fedora / CentOS / RHEL">
+            ```
+            sudo dnf install python3
+            ```
+          </TabItem>
+        </Tabs>
       </linux>
       <mac>
-        No Mac, é recomendado que o Node.js seja instalado através de um gerenciador de pacotes.
+        No Mac, a instalação do Python se dá como qualquer outro programa:
 
-        1. Na [página de download](https://nodejs.org/pt/download/package-manager) do Node.js, escolha a aba **Gestor de Pacote**
-        2. Selecione na parte logo abaixo das abas qual gerenciador de pacotes você quer utilizar (recomendado: `nvm`)
-        3. Basta seguir os comandos que estarão logo em seguida.
+        1. Na [página de download](https://www.python.org/downloads/) do Python, clique no botão **Download Python** na área azul (parte superior do site, botão amarelo).
+        2. Depois, basta instalar como qualquer programa: Abra o arquivo baixado e siga as instruções do instalador.\
+           **:warning: Importante :warning: Durante a instalação, selecione a opção "Adicionar python.exe ao PATH". Isso fará com que o Python possa ser acessado pela linha de comando.**\
+           Outra recomendação é instalar o Python para todos os usuários, como demonstrado abaixo:\
+          ![Instalando o Python3 no Windows](img/02-windows-python-install.gif "Instalando o Python3 no Windows")
       </mac>
     </OSTabs>
 
     <h3>b) Verificando se tudo instalou corretamente</h3>
 
-    Para testar se tudo foi instalado corretamente, execute os comandos `node -v` e `npm -v` (atenção: uma das opções de instalação é o n**V**m e este é o n**P**m :wink:). Se a saída for semelhante a esta abaixo, pronto!
+    Para testar se tudo foi instalado corretamente, execute o comando `python3 --version`. Se a saída for semelhante a esta abaixo, pronto!
 
     <OSTabs hidden>
-      <windows>![Executando os comandos node -v e npm -v no PowerShell](img/02-windows-js-version.gif "Executando os comandos node -v e npm -v no PowerShell")</windows>
-      <linux>![Executando os comandos node -v e npm -v no Linux](img/02-linux-python-version.gif "Executando o comando python3 --version no Linux")</linux>
-      <mac>![Executando os comandos node -v e npm -v no Linux](img/02-linux-js-version.gif "Executando os comandos node -v e npm -v no Linux")</mac>
+      <windows>![Executando o comando python3 --version no PowerShell](img/02-windows-js-version.gif "Executando o comando python3 --version no PowerShell")</windows>
+      <linux>![Executando o comando python3 --version no Linux](img/02-linux-python-version.gif "Executando o comando python3 --version no Linux")</linux>
+      <mac>![Executando o comando python3 --version no Linux](img/02-linux-python-version.gif "Executando o comando python3 --version no Linux")</mac>
     </OSTabs>
   </python>
 </LangTabs>
